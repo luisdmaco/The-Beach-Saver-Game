@@ -1,5 +1,6 @@
 #pragma once
 #include "monigote.h"
+
 namespace trabajofinal {
 
 	using namespace System;
@@ -24,7 +25,7 @@ namespace trabajofinal {
 			space = BufferedGraphicsManager::Current;
 			buffer = space->Allocate(g, panel1->ClientRectangle);
 			p = gcnew Bitmap("personaje.png");
-			objmonigote = new Humano(48,460);
+			objmonigote = new Humano(p, 48, 460);
 			Mapa = gcnew Bitmap("mapa.jpeg");
 		}
 		void ColocaNombre(String^ s)
@@ -81,9 +82,10 @@ namespace trabajofinal {
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(-3, 0);
+			this->panel1->Location = System::Drawing::Point(-4, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(795, 560);
+			this->panel1->Size = System::Drawing::Size(1060, 689);
 			this->panel1->TabIndex = 0;
 			// 
 			// timer1
@@ -93,13 +95,15 @@ namespace trabajofinal {
 			// 
 			// MyForm_level01
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(795, 572);
+			this->ClientSize = System::Drawing::Size(1060, 704);
 			this->Controls->Add(this->panel1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm_level01";
 			this->Text = L"MyForm_level01";
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm_level01::MyForm_level01_KeyDown);
+			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm_level01::MyForm_level01_KeyUp);
 			this->ResumeLayout(false);
 
 		}
@@ -109,25 +113,14 @@ namespace trabajofinal {
 		buffer->Graphics->DrawImage(Mapa, 0, 0, panel1->Width, panel1->Height);
 		buffer->Graphics->DrawString(nombre, gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 120, 10);
 		buffer->Graphics->DrawString("USUARIO : ", gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 50, 10);
-		objmonigote->dibujar(buffer->Graphics, p);
+		objmonigote->draw(buffer->Graphics, p);
 		buffer->Render(g);
 	}
 	private: System::Void MyForm_level01_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-		switch (e->KeyCode)
-		{
-		case Keys::A:
-			objmonigote->mover(buffer->Graphics, 'A');
-			break;
-		case Keys::D:
-			objmonigote->mover(buffer->Graphics, 'D');
-			break;
-		case Keys::S:
-			objmonigote->mover(buffer->Graphics, 'S');
-			break;
-		case Keys::W:
-			objmonigote->mover(buffer->Graphics, 'W');
-			break;
-		}
+		objmonigote->MovimientoMonigote(true, e->KeyCode, g);
 	}
+private: System::Void MyForm_level01_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+	objmonigote->MovimientoMonigote(false, e->KeyCode, g);
+}
 };
 }
