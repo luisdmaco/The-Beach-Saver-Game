@@ -1,5 +1,6 @@
 #pragma once
 using namespace System::Drawing;
+using namespace System::Windows::Forms;
 #include "Entidad.h"
 
 class Humano : public Entidad
@@ -24,7 +25,7 @@ public:
 	};
 	~Humano();
 
-	void dibujar(Graphics^ g, Bitmap^ bmp) {
+	void Draw(Graphics^ g, Bitmap^ bmp) {
 		ancho = bmp->Width / 4;;
 		alto = bmp->Height / 4;;
 		Rectangle seccionmostrar = Rectangle(idx * ancho, idy * alto, ancho, alto);
@@ -32,18 +33,18 @@ public:
 		g->DrawImage(bmp, zoom, seccionmostrar, GraphicsUnit::Pixel);
 	}
 
-	void mover(Graphics^ g, char i)
+	void mover(Graphics^ g, Keys k) //keys es una clase que tiene mapeado todo el teclado
 	{
-		switch (i)
+		switch (k)
 		{
-		case 'A':
+		case Keys::Left: //flecha izquierda
 			if (x > 0)
 			{
 				idy = 1;
 				x -= dx;
 			} break;
 
-		case 'W':
+		case Keys::Up: //flecha arriba
 
 			if (y > 50)
 			{
@@ -51,13 +52,13 @@ public:
 				y -= dy;
 
 			}break;
-		case 'D':
+		case Keys::Right: //flecha derecha
 			if (x + ancho * 1.0 < g->VisibleClipBounds.Width)
 			{
 				idy = 2;
 				x += dx;
 			}break;
-		case 'S':
+		case Keys::Down: //flecha abajo
 			if (y + alto * 1.0 < g->VisibleClipBounds.Height)
 			{
 				idy = 0;

@@ -47,7 +47,7 @@ public: // utilicen el que más les convenga
 		width = height = 70;
 	}
 	~Entidad();
-
+#pragma region Set_Get
 	// metodo get
 	int getx() { return x; }
 	int gety() { return y; }
@@ -77,7 +77,7 @@ public: // utilicen el que más les convenga
 	void setvisible(bool date) { visible = date; }
 	void setfracX(int date) { fracX = date; }
 	void setfracY(int date) { fracY = date; }
-
+#pragma endregion
 
 	void Desplazamiento(Direccion date)
 	{
@@ -92,8 +92,7 @@ public: // utilicen el que más les convenga
 		x += dx;
 		y += dy;
 	}
-	void Draw(Graphics^ g) {};
-	virtual void Draw_Image(Graphics^ g, Bitmap^ bmp)
+	virtual void Draw(Graphics^ g, Bitmap^ bmp)
 	{
 		w = bmp->Width / limC;
 		h = bmp->Height / limF;
@@ -103,6 +102,6 @@ public: // utilicen el que más les convenga
 		col++;
 		if (col == limC) col = 0;
 	}
-	void Erase(Graphics^ g) {};
+
 
 };
