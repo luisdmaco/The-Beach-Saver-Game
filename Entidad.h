@@ -1,5 +1,5 @@
 #pragma once
-using namespace System::Drawing;
+#include "Dependencias.h"
 
 public enum Direccion { right, left, nothing };
 
@@ -7,13 +7,12 @@ class Entidad
 {
 protected:
 	int x, y;
+	int idx, idy;
 	int dx, dy;
 	int ancho, alto;
 	bool visible;
 	Direccion orientation;
-	int x, y;
 	int w, h;
-	int dx, dy;
 	int width, height;
 	int limF, limC;
 	int fil, col;
@@ -46,7 +45,7 @@ public: // utilicen el que más les convenga
 		orientation = Direccion::nothing;
 		width = height = 70;
 	}
-	~Entidad();
+	~Entidad(){}
 #pragma region Set_Get
 	// metodo get
 	int getx() { return x; }
@@ -79,12 +78,12 @@ public: // utilicen el que más les convenga
 	void setfracY(int date) { fracY = date; }
 #pragma endregion
 
-	void Desplazamiento(Direccion date)
+	/*void Desplazamiento(Direccion date)
 	{
 		dx = dy = 0;
 		if (orientation == right) { dx = (w / fracX); fil = 3; }
 		if (orientation == left) { dx = -(w / fracX); fil = 3; }
-	}
+	}*/
 	virtual void Move(Graphics^ g)
 	{
 		if (x + dx<1 || x + dx + w>g->VisibleClipBounds.Width) dx = dx * -1;

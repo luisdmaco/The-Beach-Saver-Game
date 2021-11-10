@@ -1,12 +1,8 @@
 #pragma once
-using namespace System::Drawing;
-using namespace System::Windows::Forms;
 #include "Entidad.h"
 
 class Humano : public Entidad
 {
-private:
-	int idx, idy;
 public:
 	Humano(int x, int y)
 	{
@@ -19,21 +15,20 @@ public:
 
 		dx = 5;
 		dy = 5;
-
 		idx = 0;
 		idy = 0;
 	};
-	~Humano();
+	~Humano(){}
 
 	void Draw(Graphics^ g, Bitmap^ bmp) {
 		ancho = bmp->Width / 4;;
 		alto = bmp->Height / 4;;
 		Rectangle seccionmostrar = Rectangle(idx * ancho, idy * alto, ancho, alto);
-		Rectangle zoom = Rectangle(x, y, ancho * 1.0, alto * 1.0);
+		Rectangle zoom = Rectangle(x, y, ancho, alto);
 		g->DrawImage(bmp, zoom, seccionmostrar, GraphicsUnit::Pixel);
 	}
 
-	void mover(Graphics^ g, Keys k) //keys es una clase que tiene mapeado todo el teclado
+	void movimientoMonigote(Graphics^ g, Keys k) //keys es una clase que tiene mapeado todo el teclado
 	{
 		switch (k)
 		{
@@ -53,13 +48,13 @@ public:
 
 			}break;
 		case Keys::Right: //flecha derecha
-			if (x + ancho * 1.0 < g->VisibleClipBounds.Width)
+			if (x + ancho * 1 < g->VisibleClipBounds.Width)
 			{
 				idy = 2;
 				x += dx;
 			}break;
 		case Keys::Down: //flecha abajo
-			if (y + alto * 1.0 < g->VisibleClipBounds.Height)
+			if (y + alto * 1 < g->VisibleClipBounds.Height)
 			{
 				idy = 0;
 				y += dy;

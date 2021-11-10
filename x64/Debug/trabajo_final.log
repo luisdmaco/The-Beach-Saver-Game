@@ -1,1 +1,6 @@
-﻿  trabajo_final.vcxproj -> C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe
+﻿  MyForm_empezar.cpp
+  MyForm_level01.cpp
+  MyForm_principal.cpp
+  Generando código...
+  MyForm_creditos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  trabajo_final.vcxproj -> C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe

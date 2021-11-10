@@ -109,25 +109,11 @@ namespace trabajofinal {
 		buffer->Graphics->DrawImage(Mapa, 0, 0, panel1->Width, panel1->Height);
 		buffer->Graphics->DrawString(nombre, gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 120, 10);
 		buffer->Graphics->DrawString("USUARIO : ", gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 50, 10);
-		objmonigote->dibujar(buffer->Graphics, p);
+		objmonigote->Draw(buffer->Graphics, p);
 		buffer->Render(g);
 	}
 	private: System::Void MyForm_level01_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-		switch (e->KeyCode)
-		{
-		case Keys::A:
-			objmonigote->mover(buffer->Graphics, 'A');
-			break;
-		case Keys::D:
-			objmonigote->mover(buffer->Graphics, 'D');
-			break;
-		case Keys::S:
-			objmonigote->mover(buffer->Graphics, 'S');
-			break;
-		case Keys::W:
-			objmonigote->mover(buffer->Graphics, 'W');
-			break;
-		}
+		objmonigote->movimientoMonigote(g, e->KeyCode);
 	}
 };
 }
