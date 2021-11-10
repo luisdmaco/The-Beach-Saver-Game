@@ -7,3 +7,12 @@ C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofin
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_principal.resources
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.vcxproj.GenerateResource.cache
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.vcxproj.AssemblyReference.cache
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_creditos.resources
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_empezar.resources
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_instrucciones.resources
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_level01.resources
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_level_02.resources
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_principal.resources
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.vcxproj.GenerateResource.cache
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe

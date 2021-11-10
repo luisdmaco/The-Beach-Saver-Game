@@ -23,9 +23,9 @@ namespace trabajofinal {
 			g = panel1->CreateGraphics();
 			space = BufferedGraphicsManager::Current;
 			buffer = space->Allocate(g, panel1->ClientRectangle);
-			p = gcnew Bitmap("chrono.png");
+			p = gcnew Bitmap("personaje.png");
 			objmonigote = new Humano(48,460);
-			Mapa = gcnew Bitmap("m.jpg");
+			Mapa = gcnew Bitmap("mapa.jpeg");
 		}
 		void ColocaNombre(String^ s)
 		{

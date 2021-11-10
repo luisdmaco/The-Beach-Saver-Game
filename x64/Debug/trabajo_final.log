@@ -1,16 +1,12 @@
-﻿  MyForm_creditos.cpp
-  MyForm_empezar.cpp
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,54): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-  MyForm_instrucciones.cpp
+﻿  MyForm_empezar.cpp
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,54): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
   MyForm_level01.cpp
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,54): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-  MyForm_level_02.cpp
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,54): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
   MyForm_principal.cpp
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,54): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,54): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\monigote.h(34,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
   Generando código...
   MyForm_creditos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  trabajo_final.vcxproj -> C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe
+  trabajo_final.vcxproj -> C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe

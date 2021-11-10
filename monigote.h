@@ -28,8 +28,8 @@ public:
 	~Humano();
 
 	void dibujar(Graphics^ g, Bitmap^ bmp) {
-		ancho = 48;
-		alto = 72;
+		ancho = bmp->Width / 4;;
+		alto = bmp->Height / 4;;
 		Rectangle seccionmostrar = Rectangle(idx * ancho, idy * alto, ancho, alto);
 		Rectangle zoom = Rectangle(x, y, ancho * 1.0, alto * 1.0);
 		g->DrawImage(bmp, zoom, seccionmostrar, GraphicsUnit::Pixel);
@@ -48,7 +48,7 @@ public:
 
 		case 'W':
 
-			if (y > 0)
+			if (y > 50)
 			{
 				idy = 3;
 				y -= dy;
