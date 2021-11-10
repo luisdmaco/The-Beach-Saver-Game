@@ -38,7 +38,8 @@ public:
 	{
 		dy = newdy;
 	}
-
+	int getX() { return x; }
+	int getY() { return y; }
 #pragma endregion
 };
 

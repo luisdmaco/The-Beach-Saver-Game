@@ -12,8 +12,8 @@ public:
 		IDx = 0; //sirve para cambiar de estado en este caso
 	}
 	void draw(Graphics^ g, Bitmap^ img) {
-		Rectangle cut = Rectangle(IDx * width, height, 64, 64);
-		g->DrawImage(img, AreaRectangle(), cut, GraphicsUnit::Pixel);
+		Rectangle corte = Rectangle(IDx * width, 0 * height, 64, 64);
+		g->DrawImage(img, AreaRectangle(), corte, GraphicsUnit::Pixel);
 	}
 	void cambioEstado(int milisegundos) { //implementar en timer (crear un for e ingresar el int a la función)
 		if (milisegundos == 100) { //al pasar 10 segundos

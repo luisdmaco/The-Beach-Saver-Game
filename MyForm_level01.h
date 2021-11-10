@@ -1,6 +1,6 @@
 #pragma once
 #include "monigote.h"
-#include "Basura.h"
+
 namespace trabajofinal {
 
 	using namespace System;
