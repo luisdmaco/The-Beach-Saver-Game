@@ -1,0 +1,9 @@
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajo_final.vcxproj.AssemblyReference.cache
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajofinal.MyForm_principal.resources
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajo_final.vcxproj.GenerateResource.cache
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajo_final.exe
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajofinal.MyForm_empezar.resources
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajofinal.MyForm_level01.resources
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajofinal.MyForm_instrucciones.resources
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajofinal.MyForm_level_02.resources
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajofinal.MyForm_creditos.resources

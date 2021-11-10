@@ -1,0 +1,5 @@
+﻿  MyForm_principal.cpp
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\monigote.h(33,54): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\monigote.h(33,42): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+  MyForm_creditos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  trabajo_final.vcxproj -> H:\MI UPC\segundo ciclo\PROGRAMANCION 2\trabajo final\trabajo_final\Debug\trabajo_final.exe
