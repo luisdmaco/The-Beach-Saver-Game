@@ -154,6 +154,7 @@
     <ClInclude Include="MyForm_principal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Tacho.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm_creditos.resx">
