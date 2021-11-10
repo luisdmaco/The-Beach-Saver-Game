@@ -17,7 +17,7 @@ public:
 
 		//x = 100;
 		//y = 100;
-	   comentario salvaje de prueba aparece xd
+	   //comentario salvaje de prueba aparece xd
 
 		dx = 5;
 		dy = 5;
