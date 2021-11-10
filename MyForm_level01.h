@@ -81,9 +81,9 @@ namespace trabajofinal {
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(-3, 1);
+			this->panel1->Location = System::Drawing::Point(-3, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(795, 559);
+			this->panel1->Size = System::Drawing::Size(795, 560);
 			this->panel1->TabIndex = 0;
 			// 
 			// timer1
