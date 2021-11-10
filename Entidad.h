@@ -6,6 +6,9 @@ public enum Direccion { right, left, nothing };
 class Entidad
 {
 protected:
+	int x, y;
+	int dx, dy;
+	int ancho, alto;
 	bool visible;
 	Direccion orientation;
 	int x, y;

@@ -1,13 +1,10 @@
 #pragma once
 using namespace System::Drawing;
+#include "Entidad.h"
 
-class Humano
+class Humano : public Entidad
 {
 private:
-
-	int x, y;
-	int dx, dy;
-	int ancho, alto;
 	int idx, idy;
 public:
 	Humano(int x, int y)
@@ -74,11 +71,4 @@ public:
 			idx = 0;
 		}
 	}
-
-
-
-
-
-
-
 };

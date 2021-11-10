@@ -130,6 +130,7 @@
     <ClCompile Include="MyForm_principal.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Enemigo.h" />
     <ClInclude Include="Entidad.h" />
     <ClInclude Include="monigote.h" />
     <ClInclude Include="MyForm_creditos.h">
