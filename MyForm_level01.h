@@ -1,5 +1,5 @@
 #pragma once
-#include "monigote.h"
+#include "controller.h"
 
 namespace trabajofinal {
 
@@ -18,15 +18,22 @@ namespace trabajofinal {
 	public:
 		MyForm_level01(void)
 		{
+			srand(time(NULL));
 			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
+			
 			g = panel1->CreateGraphics();
 			space = BufferedGraphicsManager::Current;
 			buffer = space->Allocate(g, panel1->ClientRectangle);
-			p = gcnew Bitmap("personaje.png");
-			objmonigote = new Humano(p, 48, 460);
+			imgCleaner = gcnew Bitmap("personaje.png");
+			
 			Mapa = gcnew Bitmap("mapa.jpeg");
+			imgTacho = gcnew Bitmap("tacho.png");
+			imgBaño = gcnew Bitmap("baño.png");
+			//imgBasura = gcnew Bitmap("basura.png");
+			imgEnemy = gcnew Bitmap("enemy.png");
+
+			controller = new Controller(imgCleaner);
+
 		}
 		void ColocaNombre(String^ s)
 		{
@@ -37,17 +44,21 @@ namespace trabajofinal {
 		Graphics^ g;
 		BufferedGraphicsContext^ space;
 		BufferedGraphics^ buffer;
-		Bitmap^ p;
+		Bitmap^ imgCleaner;
 		Bitmap^ Mapa;
+		Bitmap^ imgTacho;
+		Bitmap^ imgBaño;
+		Bitmap^ imgBasura;
+		Bitmap^ imgEnemy;
 		String ^nombre;
-
-
-
-	protected:
+		Controller* controller;
 
 
 	protected:
-		Humano* objmonigote;
+
+
+	protected:
+		
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
 		~MyForm_level01()
@@ -109,18 +120,26 @@ namespace trabajofinal {
 		}
 #pragma endregion
 	private: System::Void timer1_Tick_1(System::Object^ sender, System::EventArgs^ e) {
+		//clear
 		buffer->Graphics->Clear(Color::White);
+		//collision
+		
+		//move (enemigos)
+		
+		//draw
 		buffer->Graphics->DrawImage(Mapa, 0, 0, panel1->Width, panel1->Height);
 		buffer->Graphics->DrawString(nombre, gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 120, 10);
 		buffer->Graphics->DrawString("USUARIO : ", gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 50, 10);
-		objmonigote->draw(buffer->Graphics, p);
+		//objmonigote->draw(buffer->Graphics, imgCleaner);
+		controller->dibujarTodo(buffer->Graphics, imgCleaner, imgEnemy, imgBaño, imgTacho, imgBasura);//falta la imagen de basura unu
+		//render
 		buffer->Render(g);
 	}
 	private: System::Void MyForm_level01_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-		objmonigote->MovimientoMonigote(true, e->KeyCode, g);
+		controller->getCleaner()->MovimientoMonigote(true, e->KeyCode, g);
 	}
 private: System::Void MyForm_level01_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-	objmonigote->MovimientoMonigote(false, e->KeyCode, g);
+	controller->getCleaner()->MovimientoMonigote(false, e->KeyCode, g);
 }
 };
 }

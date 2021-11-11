@@ -1,6 +1,12 @@
 ﻿  MyForm_empezar.cpp
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,67): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   MyForm_level01.cpp
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,67): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   MyForm_principal.cpp
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,67): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   Generando código...
   MyForm_creditos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  trabajo_final.vcxproj -> C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe
+  trabajo_final.vcxproj -> C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe
