@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Bano.h" />
     <ClInclude Include="Basura.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="Dependencias.h" />
     <ClInclude Include="Enemigo.h" />
     <ClInclude Include="Entidad.h" />

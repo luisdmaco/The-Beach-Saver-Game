@@ -2,18 +2,16 @@
 #include <vector>
 #include "Basura.h"
 #include "Tacho.h"
-#include "Baño.h"
+#include "Bano.h"
 #include "monigote.h"
 
 class Controller {
 private:
 	vector<Basura*> basuras;
 	vector<Tacho*> tachos;
-	vector<Baño*> baños;
+	vector<Bano*> baños;
 	Humano* cleaner;
 
-
-	
 public:
 	Controller() {}
 	~Controller() {}
