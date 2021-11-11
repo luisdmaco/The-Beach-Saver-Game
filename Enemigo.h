@@ -55,7 +55,7 @@ public:
 	}
 
 #pragma region Set-Get-Functions
-	int getPosicionX() { return x; } //usado para saber donde está y (desaparecer en una posición)
+	int getPosicionX() { return x; } //usado para saber donde está x (desaparecer en una posición)
 	int getPosicionY() { return y; } //por si acaso
 #pragma endregion
 };
