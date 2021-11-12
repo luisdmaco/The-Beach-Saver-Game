@@ -12,7 +12,7 @@ public:
 		IDx = 0; 
 	}
 	~Bano(){}
-	Rectangle AreaBano() { return Rectangle(x - 50, y - 50, width + 100, height + 100); }
+	Rectangle AreaBano() { return Rectangle(x , y , width , height ); }
 	                                     //inicio del area - hasta el final del baño + el area restante
 	void draw(Graphics^ g, Bitmap^ img) {
 		Rectangle corte = Rectangle(IDx * width, 0 * height, 64, 64);
