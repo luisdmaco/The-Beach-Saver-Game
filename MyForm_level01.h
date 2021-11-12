@@ -1,6 +1,6 @@
 #pragma once
 #include "controller.h"
-
+#include "MyForm_creditos.h"
 namespace trabajofinal {
 
 	using namespace System;
@@ -39,14 +39,7 @@ namespace trabajofinal {
 
 			contBaños = 0; contTachos = 1;
 			//final
-			if (controller->getMicrobiologico() >= 100 && controller->getLimpiezaPlaya() >= 100 && controller->cantBaños() >= 1)
-			{
-				
-				MyForm_creditos^ Ii = gcnew MyForm_creditos();
-				this->Hide();
-				Ii->ShowDialog();
-				
-			}
+			
 		}
 		void ColocaNombre(String^ s)
 		{
@@ -149,6 +142,8 @@ namespace trabajofinal {
 			this->timerEntierro = (gcnew System::Windows::Forms::Timer(this->components));
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->lbCapacidadBolsa = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->lbVelocidad = (gcnew System::Windows::Forms::Label());
 			this->lbBolsa = (gcnew System::Windows::Forms::Label());
 			this->lbDinero = (gcnew System::Windows::Forms::Label());
@@ -168,8 +163,6 @@ namespace trabajofinal {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->timerMicrobiologicoBaños = (gcnew System::Windows::Forms::Timer(this->components));
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->lbCapacidadBolsa = (gcnew System::Windows::Forms::Label());
 			this->panel2->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -234,6 +227,26 @@ namespace trabajofinal {
 			this->groupBox3->TabIndex = 3;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"RECURSOS";
+			// 
+			// lbCapacidadBolsa
+			// 
+			this->lbCapacidadBolsa->AutoSize = true;
+			this->lbCapacidadBolsa->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbCapacidadBolsa->Location = System::Drawing::Point(110, 81);
+			this->lbCapacidadBolsa->Name = L"lbCapacidadBolsa";
+			this->lbCapacidadBolsa->Size = System::Drawing::Size(17, 18);
+			this->lbCapacidadBolsa->TabIndex = 7;
+			this->lbCapacidadBolsa->Text = L"0";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(6, 81);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(104, 13);
+			this->label8->TabIndex = 6;
+			this->label8->Text = L"Capacidad de bolsa:";
 			// 
 			// lbVelocidad
 			// 
@@ -305,7 +318,7 @@ namespace trabajofinal {
 			this->groupBox2->Size = System::Drawing::Size(164, 315);
 			this->groupBox2->TabIndex = 2;
 			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"TIENDA";
+			this->groupBox2->Text = L"TIENDA (cerrado por covid :c)";
 			// 
 			// lbBuyBolsa
 			// 
@@ -386,11 +399,11 @@ namespace trabajofinal {
 			// lbMicrobiologico
 			// 
 			this->lbMicrobiologico->AutoSize = true;
-			this->lbMicrobiologico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lbMicrobiologico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbMicrobiologico->Location = System::Drawing::Point(147, 16);
+			this->lbMicrobiologico->Location = System::Drawing::Point(74, 29);
 			this->lbMicrobiologico->Name = L"lbMicrobiologico";
-			this->lbMicrobiologico->Size = System::Drawing::Size(17, 18);
+			this->lbMicrobiologico->Size = System::Drawing::Size(21, 24);
 			this->lbMicrobiologico->TabIndex = 6;
 			this->lbMicrobiologico->Text = L"0";
 			// 
@@ -415,7 +428,7 @@ namespace trabajofinal {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(0, 16);
+			this->label5->Location = System::Drawing::Point(3, 16);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(148, 13);
 			this->label5->TabIndex = 3;
@@ -436,27 +449,8 @@ namespace trabajofinal {
 			// timerMicrobiologicoBaños
 			// 
 			this->timerMicrobiologicoBaños->Enabled = true;
+			this->timerMicrobiologicoBaños->Interval = 500;
 			this->timerMicrobiologicoBaños->Tick += gcnew System::EventHandler(this, &MyForm_level01::timerMicrobiologicoBaños_Tick);
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(6, 81);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(104, 13);
-			this->label8->TabIndex = 6;
-			this->label8->Text = L"Capacidad de bolsa:";
-			// 
-			// lbCapacidadBolsa
-			// 
-			this->lbCapacidadBolsa->AutoSize = true;
-			this->lbCapacidadBolsa->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbCapacidadBolsa->Location = System::Drawing::Point(110, 81);
-			this->lbCapacidadBolsa->Name = L"lbCapacidadBolsa";
-			this->lbCapacidadBolsa->Size = System::Drawing::Size(17, 18);
-			this->lbCapacidadBolsa->TabIndex = 7;
-			this->lbCapacidadBolsa->Text = L"0";
 			// 
 			// MyForm_level01
 			// 
@@ -503,7 +497,21 @@ namespace trabajofinal {
 		controller->dibujarTodo(buffer->Graphics, imgCleaner, imgEnemy, imgBaño, imgTacho, imgBasura);
 		//render
 		buffer->Render(g);
-		
+		//final
+		if (controller->getMicrobiologico() >= 100 && controller->getLimpiezaPlaya() >= 100 && controller->cantBaños() >= 1)
+		{
+			timer1->Enabled = false;
+			timerBasura->Enabled = false;
+			timerEnemy->Enabled = false;
+			timerEntierro->Enabled = false;
+			timerMicrobiologicoBaños->Enabled = false;
+			timerBasura->Enabled = false;
+
+			MyForm_creditos^ Ii = gcnew MyForm_creditos();
+			this->Hide();
+			Ii->ShowDialog();
+			this->Close();
+		}
 		
 	}
 	private: System::Void MyForm_level01_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {

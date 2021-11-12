@@ -153,7 +153,7 @@ public:
 		for (int i = 0; i < basuras.size(); i++) {
 			if (!basuras[i]->getVisible()) {
 				basuras.erase(basuras.begin() + i);
-				nivelMicrobiologico-=2;
+				nivelMicrobiologico-=8;
 			}
 		}
 
