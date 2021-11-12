@@ -142,5 +142,5 @@ namespace trabajofinal {
 	}
 };
 }
-//problemas con el mov del personaje
+
 

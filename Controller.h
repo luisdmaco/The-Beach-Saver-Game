@@ -60,25 +60,25 @@ public:
 		int v = 5; //value == dx / dy
 		if (accion == true)
 		{
-			if (tecla == Keys::Up || tecla == Keys::W)
+			if (tecla == Keys::Up )
 			{
 				cleaner->setDy(-v);
 				cleaner->setAccion(Arriba);
 			}
 				
-			else if (tecla == Keys::Down || tecla == Keys::S)
+			else if (tecla == Keys::Down )
 			{
 				cleaner->setDy(v);
 				cleaner->setAccion(Abajo);
 			}
 
-			else if (tecla == Keys::Left || tecla == Keys::A)
+			else if (tecla == Keys::Left )
 			{
 				cleaner->setDx(-v);
 				cleaner->setAccion(Izquierda);
 			}
 				
-			else if (tecla == Keys::Right || tecla == Keys::D)
+			else if (tecla == Keys::Right )
 			{
 				cleaner->setDx(v);
 				cleaner->setAccion(Derecha);
@@ -87,13 +87,13 @@ public:
 		}
 		else
 		{
-			if (tecla == Keys::Up || tecla == Keys::A)
+			if (tecla == Keys::Up )
 				cleaner->setDy(0);
-			else if (tecla == Keys::Down || tecla == Keys::S)
+			else if (tecla == Keys::Down )
 				cleaner->setDy(0);
-			else if (tecla == Keys::Left || tecla == Keys::A)
+			else if (tecla == Keys::Left)
 				cleaner->setDx(0);
-			else if (tecla == Keys::Right || tecla == Keys::D)
+			else if (tecla == Keys::Right )
 				cleaner->setDx(0);
 		}
 	}
