@@ -35,23 +35,25 @@ public:
 		}
 	}
 	void move(Graphics^ g) {
-		if (accion == izquierda) { //si se va hacia la izquierda
+		if (accion == derecha) { //si se va hacia la derecha
 			if (x < g->VisibleClipBounds.Width) {
-				setDx(6);
+				setDx(10);
 				x += dx;
 			}
 			else { //si sobrepasa los limites de la pantalla se detiene (para evitar errores)
 				setDx(0);
 			}
+			
 		}
-		if (accion == derecha) { //si se va hacia la derecha
+		if (accion == izquierda) { //si se va hacia la izquierda
 			if (x + dx + width != 0) {
-				setDx(-6);
+				setDx(-10);
 				x += dx;
 			}
 			else { //cuando sea igual a 0 se detiene (para evitar errores)
 				setDx(0);
 			}
+			
 		}
 	}
 

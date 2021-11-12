@@ -22,9 +22,8 @@ public:
 	virtual void draw(Graphics^ g, Bitmap^ img) { //draw default básico, en cada clase se va a sobreescribir
 		g->DrawImage(img, AreaRectangle());
 	}
-	virtual void move(Graphics^ g) { //move default básico, en cada clase se va a sobreescribir
-		x += dx;
-		y += dy;
+	virtual void move() { //move default básico, en cada clase se va a sobreescribir
+		
 	}
 	Rectangle AreaRectangle() { return Rectangle(x, y, width, height); } 
 	//obtener area de cada sprite en cualquier lugar

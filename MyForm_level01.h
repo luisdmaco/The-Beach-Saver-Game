@@ -93,9 +93,9 @@ namespace trabajofinal {
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(-3, 0);
+			this->panel1->Location = System::Drawing::Point(-2, 1);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(795, 560);
+			this->panel1->Size = System::Drawing::Size(700, 700);
 			this->panel1->TabIndex = 0;
 			// 
 			// timer1
@@ -108,7 +108,7 @@ namespace trabajofinal {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(795, 572);
+			this->ClientSize = System::Drawing::Size(873, 702);
 			this->Controls->Add(this->panel1);
 			this->Name = L"MyForm_level01";
 			this->Text = L"MyForm_level01";
@@ -124,7 +124,7 @@ namespace trabajofinal {
 		//collision
 		
 		//move (enemigos)
-		
+		controller->moverTodo(buffer->Graphics);
 		//draw
 		buffer->Graphics->DrawImage(Mapa, 0, 0, panel1->Width, panel1->Height);
 		buffer->Graphics->DrawString(nombre, gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 120, 10);
@@ -135,10 +135,12 @@ namespace trabajofinal {
 		buffer->Render(g);
 	}
 	private: System::Void MyForm_level01_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-		controller->getCleaner()->MovimientoMonigote(true, e->KeyCode, g);
+		controller->MovimientoMonigote(true, e->KeyCode);
 	}
 	private: System::Void MyForm_level01_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-		controller->getCleaner()->MovimientoMonigote(false, e->KeyCode, g);
+		controller->MovimientoMonigote(false, e->KeyCode);
 	}
 };
 }
+//problemas con el mov del personaje
+
