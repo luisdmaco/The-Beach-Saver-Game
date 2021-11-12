@@ -23,7 +23,7 @@ public:
 		this->x = x; //set x en la posicion de pantalla deseada
 		this->y = y; //set y en la posicion de pantalla deseada
 		dinero = 0;
-		bolsa = 10;
+		bolsa = 0;
 		capacidadBolsa = 20;
 	}
 	~Humano(){}

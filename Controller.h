@@ -13,11 +13,14 @@ private:
 	vector<Enemigo*> enemigos;
 	vector<Bano*> baños;
 	Humano* cleaner;
-	
+	int nivelMicrobiologico;
+	int limpiezaPlaya;
 
 public:
 	Controller(Bitmap^ imgCleaner) {
 		cleaner = new Humano(imgCleaner,100,100);
+		nivelMicrobiologico = 0;
+		limpiezaPlaya = 0;
 	}
 	~Controller() {}
 	void addEnemy(Graphics^ g,Bitmap^ imgEnemigo) {
@@ -54,9 +57,14 @@ public:
 	void moverTodo(Graphics^g) {
 		for (int i = 0; i < enemigos.size(); i++)
 			enemigos[i]->move(g);
-		cleaner->move(g);//aqui se le pone un condicional para no chocar con opbstaculos (huarzu: fijarse archivo C1)
+		for (int i = 0; i < tachos.size(); i++)//colision con tacho 
+			if (!cleaner->AreaNextRectangle().IntersectsWith(tachos[i]->AreaTacho()))
+				cleaner->move(g);
+		for (int i = 0; i < baños.size(); i++)//colision con baño 
+			if (!cleaner->AreaNextRectangle().IntersectsWith(baños[i]->AreaBano()))
+				cleaner->move(g);
 	}
-	void MovimientoMonigote(bool accion, Keys tecla) { //ESTA FUNCIÓN SE MOVERÁ A CONTROLLER
+	void MovimientoMonigote(bool accion, Keys tecla) {
 		int v = 5; //value == dx / dy
 		if (accion == true)
 		{
@@ -111,7 +119,7 @@ public:
 				}
 			}
 		}
-		for (int i = 0; i < basuras.size(); i++)//radio de recoleccion automatica de tacho con basura //////PROPBLEMAPROPBLEMAPROPBLEMAPROPBLEMAPROPBLEMA///////////
+		for (int i = 0; i < basuras.size(); i++)//radio de recoleccion automatica de tacho con basura 
 		{
 			for (int g = 0; g < tachos.size(); g++)
 			{
@@ -119,6 +127,7 @@ public:
 					basuras[i]->setVisible(false);
 					basuras.erase(basuras.begin() + i);
 					cleaner->setDinero(cleaner->getDinero() + 10);
+					limpiezaPlaya++;
 				}
 			}
 			
@@ -127,9 +136,11 @@ public:
 		{
 			if (tachos[i]->AreaRecoleccionTacho().IntersectsWith(cleaner->AreaRectangle())) {
 				cleaner->setDinero(cleaner->getDinero() + (cleaner->getBolsa() * cleaner->getCapacidadBolsa()));//el dinero = el dinero actual + (capacidad de bolsa*cantidad de basura en la bolsa*10(dinero que otorga cada basura))
+				limpiezaPlaya += cleaner->getBolsa();
 				cleaner->setBolsa(0);
 			}
 		}
+
 
 		//Elimination
 		//enemigos (fuera del mapa)
@@ -142,11 +153,12 @@ public:
 		for (int i = 0; i < basuras.size(); i++) {
 			if (!basuras[i]->getVisible()) {
 				basuras.erase(basuras.begin() + i);
+				nivelMicrobiologico-=2;
 			}
 		}
 
 	}
-	
+	void addNivelMicrobiologico() { nivelMicrobiologico+=cantBaños()*2; }
 
 	
 	Humano* getCleaner() { return cleaner; }
@@ -155,5 +167,9 @@ public:
 	Basura* getBasura(int i) { return basuras[i]; }
 	int cantBasu() { return Convert::ToInt64(basuras.size()); }
 	int cantBaños() { return Convert::ToInt64(baños.size()); }
+	int getMicrobiologico() { return nivelMicrobiologico; }
+	void setMicrobiologico(int v) { nivelMicrobiologico = v; }
+	int getLimpiezaPlaya() { return limpiezaPlaya; }
+	void setLimpiezaPlaya(int v) { limpiezaPlaya = v; }
 	
 };

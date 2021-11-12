@@ -1,24 +1,34 @@
 ﻿  MyForm_empezar.cpp
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(154,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(156,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(157,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(31,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(166,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(168,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(169,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,80): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,5): error C2065: 'MyForm_creditos': identificador no declarado
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,22): error C2065: 'Ii': identificador no declarado
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,33): error C2061: error de sintaxis: identificador 'MyForm_creditos'
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(47,5): error C2065: 'Ii': identificador no declarado
   MyForm_level01.cpp
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(154,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(156,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(157,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(31,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(166,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(168,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(169,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,80): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,5): error C2065: 'MyForm_creditos': identificador no declarado
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,22): error C2065: 'Ii': identificador no declarado
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,33): error C2061: error de sintaxis: identificador 'MyForm_creditos'
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(47,5): error C2065: 'Ii': identificador no declarado
   MyForm_principal.cpp
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(154,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(156,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(157,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(31,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(166,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(168,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(169,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,80): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,5): error C2065: 'MyForm_creditos': identificador no declarado
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,22): error C2065: 'Ii': identificador no declarado
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(45,33): error C2061: error de sintaxis: identificador 'MyForm_creditos'
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(47,5): error C2065: 'Ii': identificador no declarado
   Generando código...
-  MyForm_creditos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  trabajo_final.vcxproj -> C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe

@@ -34,8 +34,19 @@ namespace trabajofinal {
 
 			controller = new Controller(imgCleaner);
 			controller->addEnemy(g, imgEnemy);
-			controller->addTacho(imgBasura,20,buffer->Graphics->VisibleClipBounds.Height-100);
+			controller->addTacho(imgTacho,50,buffer->Graphics->VisibleClipBounds.Height-100);
+			controller->addBaño(imgBaño, 600, 555);
+
 			contBaños = 0; contTachos = 1;
+			//final
+			if (controller->getMicrobiologico() >= 100 && controller->getLimpiezaPlaya() >= 100 && controller->cantBaños() >= 1)
+			{
+				
+				MyForm_creditos^ Ii = gcnew MyForm_creditos();
+				this->Hide();
+				Ii->ShowDialog();
+				
+			}
 		}
 		void ColocaNombre(String^ s)
 		{
@@ -76,7 +87,7 @@ namespace trabajofinal {
 
 
 	private: System::Windows::Forms::Label^ lbBuyBaño;
-	private: System::Windows::Forms::Label^ lbBuyBolsa;
+
 
 
 	private: System::Windows::Forms::Label^ lbVelocidad;
@@ -84,6 +95,13 @@ namespace trabajofinal {
 	private: System::Windows::Forms::Label^ lbBolsa;
 
 	private: System::Windows::Forms::Label^ lbDinero;
+	private: System::Windows::Forms::Label^ lbBuyBolsa;
+	private: System::Windows::Forms::Label^ lbBasura;
+	private: System::Windows::Forms::Label^ lbBaños;
+	private: System::Windows::Forms::Label^ lbMicrobiologico;
+	private: System::Windows::Forms::Timer^ timerMicrobiologicoBaños;
+	private: System::Windows::Forms::Label^ lbCapacidadBolsa;
+	private: System::Windows::Forms::Label^ label8;
 
 
 	protected:
@@ -142,10 +160,16 @@ namespace trabajofinal {
 			this->lbBuyTacho = (gcnew System::Windows::Forms::Label());
 			this->lbBuyBaño = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->lbBasura = (gcnew System::Windows::Forms::Label());
+			this->lbBaños = (gcnew System::Windows::Forms::Label());
+			this->lbMicrobiologico = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->timerMicrobiologicoBaños = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->lbCapacidadBolsa = (gcnew System::Windows::Forms::Label());
 			this->panel2->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -196,6 +220,8 @@ namespace trabajofinal {
 			// 
 			// groupBox3
 			// 
+			this->groupBox3->Controls->Add(this->lbCapacidadBolsa);
+			this->groupBox3->Controls->Add(this->label8);
 			this->groupBox3->Controls->Add(this->lbVelocidad);
 			this->groupBox3->Controls->Add(this->lbBolsa);
 			this->groupBox3->Controls->Add(this->lbDinero);
@@ -225,7 +251,7 @@ namespace trabajofinal {
 			this->lbBolsa->AutoSize = true;
 			this->lbBolsa->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbBolsa->Location = System::Drawing::Point(118, 61);
+			this->lbBolsa->Location = System::Drawing::Point(110, 57);
 			this->lbBolsa->Name = L"lbBolsa";
 			this->lbBolsa->Size = System::Drawing::Size(17, 18);
 			this->lbBolsa->TabIndex = 4;
@@ -254,11 +280,11 @@ namespace trabajofinal {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(7, 65);
+			this->label3->Location = System::Drawing::Point(6, 61);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(105, 13);
+			this->label3->Size = System::Drawing::Size(98, 13);
 			this->label3->TabIndex = 1;
-			this->label3->Text = L"Capacidad de Bolsa:";
+			this->label3->Text = L"Basura en la mano:";
 			// 
 			// label2
 			// 
@@ -322,6 +348,9 @@ namespace trabajofinal {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->lbBasura);
+			this->groupBox1->Controls->Add(this->lbBaños);
+			this->groupBox1->Controls->Add(this->lbMicrobiologico);
 			this->groupBox1->Controls->Add(this->label7);
 			this->groupBox1->Controls->Add(this->label6);
 			this->groupBox1->Controls->Add(this->label5);
@@ -331,6 +360,39 @@ namespace trabajofinal {
 			this->groupBox1->TabIndex = 1;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Salubridad de la Playa";
+			// 
+			// lbBasura
+			// 
+			this->lbBasura->AutoSize = true;
+			this->lbBasura->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbBasura->Location = System::Drawing::Point(95, 102);
+			this->lbBasura->Name = L"lbBasura";
+			this->lbBasura->Size = System::Drawing::Size(17, 18);
+			this->lbBasura->TabIndex = 8;
+			this->lbBasura->Text = L"0";
+			// 
+			// lbBaños
+			// 
+			this->lbBaños->AutoSize = true;
+			this->lbBaños->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbBaños->Location = System::Drawing::Point(95, 60);
+			this->lbBaños->Name = L"lbBaños";
+			this->lbBaños->Size = System::Drawing::Size(17, 18);
+			this->lbBaños->TabIndex = 7;
+			this->lbBaños->Text = L"0";
+			// 
+			// lbMicrobiologico
+			// 
+			this->lbMicrobiologico->AutoSize = true;
+			this->lbMicrobiologico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbMicrobiologico->Location = System::Drawing::Point(147, 16);
+			this->lbMicrobiologico->Name = L"lbMicrobiologico";
+			this->lbMicrobiologico->Size = System::Drawing::Size(17, 18);
+			this->lbMicrobiologico->TabIndex = 6;
+			this->lbMicrobiologico->Text = L"0";
 			// 
 			// label7
 			// 
@@ -371,6 +433,31 @@ namespace trabajofinal {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"MENU";
 			// 
+			// timerMicrobiologicoBaños
+			// 
+			this->timerMicrobiologicoBaños->Enabled = true;
+			this->timerMicrobiologicoBaños->Tick += gcnew System::EventHandler(this, &MyForm_level01::timerMicrobiologicoBaños_Tick);
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(6, 81);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(104, 13);
+			this->label8->TabIndex = 6;
+			this->label8->Text = L"Capacidad de bolsa:";
+			// 
+			// lbCapacidadBolsa
+			// 
+			this->lbCapacidadBolsa->AutoSize = true;
+			this->lbCapacidadBolsa->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbCapacidadBolsa->Location = System::Drawing::Point(110, 81);
+			this->lbCapacidadBolsa->Name = L"lbCapacidadBolsa";
+			this->lbCapacidadBolsa->Size = System::Drawing::Size(17, 18);
+			this->lbCapacidadBolsa->TabIndex = 7;
+			this->lbCapacidadBolsa->Text = L"0";
+			// 
 			// MyForm_level01
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -399,7 +486,11 @@ namespace trabajofinal {
 		buffer->Graphics->Clear(Color::White);
 		//datos de menu
 		this->lbBolsa->Text=Convert::ToString(controller->getCleaner()->getBolsa());
+		this->lbCapacidadBolsa->Text=Convert::ToString(controller->getCleaner()->getCapacidadBolsa());
 		this->lbDinero->Text = Convert::ToString(controller->getCleaner()->getDinero());
+		this->lbMicrobiologico->Text = Convert::ToString(controller->getMicrobiologico());
+		this->lbBaños->Text = Convert::ToString(controller->cantBaños());
+		this->lbBasura->Text = Convert::ToString(controller->getLimpiezaPlaya());
 		//collision
 		controller->collision(buffer->Graphics);
 		//move (enemigos)
@@ -412,6 +503,8 @@ namespace trabajofinal {
 		controller->dibujarTodo(buffer->Graphics, imgCleaner, imgEnemy, imgBaño, imgTacho, imgBasura);
 		//render
 		buffer->Render(g);
+		
+		
 	}
 	private: System::Void MyForm_level01_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 		controller->MovimientoMonigote(true, e->KeyCode);
@@ -435,23 +528,27 @@ namespace trabajofinal {
 			controller->getBasura(i)->cambioEstado();
 		}
 	}
+	 private: System::Void timerMicrobiologicoBaños_Tick(System::Object^ sender, System::EventArgs^ e) {
+		 controller->addNivelMicrobiologico();
+	 }
 	private: System::Void lbBuyBaño_Click(System::Object^ sender, System::EventArgs^ e) {
-		int a=0;
+		
 
-		controller->addBaño(imgBaño, 660-a ,555);
-		a += 40;
-		this->lbBuyBaño->Enabled = true;
-		this->lbDinero->Text = Convert::ToString(a);
-		//contBaños* (buffer->Graphics->VisibleClipBounds.Width-controller->getBaño(controller->cantBaños())->getAncho())
+		/*controller->addBaño(imgBaño, 600 ,555);*/ //no reconoce a la colision
+		
+		
+		
+		
 	}
 	private: System::Void lbBuyTacho_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		/*controller->addTacho(imgTacho, 100, buffer->Graphics->VisibleClipBounds.Height - 500);*/ //no reconoloce la colison y tpmko al vector al parecer (observacion)
+		
 	}
 	private: System::Void lbBuyBolsa_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
-	//averiguar como ejecutar varias veces un click
-	//colisiones (personaje no pueda chocar con baño ni con tacho )
+	
+
 };
 }
 
