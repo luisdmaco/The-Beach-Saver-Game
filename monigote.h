@@ -27,7 +27,7 @@ public:
 	~Humano(){}
 
 	void draw(Graphics^ g, Bitmap^ img) {
-		Rectangle corte = Rectangle(IDx * width, accion * height, 64, 64);
+		Rectangle corte = Rectangle(IDx * width, accion * height, width, height);
 		//corte de la imagen
 		g->DrawImage(img, AreaRectangle(), corte, GraphicsUnit::Pixel);
 		if (dx != 0 || dy != 0) { //si se mueve
@@ -62,6 +62,11 @@ public:
 	void setAccion(SpritePlayer value) {
 		accion = value;
 	}
+	void setDinero(int v) { dinero = v; }
+	int getDinero() { return dinero; }
+
+	void setBolsa(int v) { bolsa = v; }
+	int getBolsa() { return bolsa; }
 	
 #pragma endregion
 };

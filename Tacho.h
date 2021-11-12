@@ -12,10 +12,10 @@ public:
 		IDx = 0;
 	}
 	~Tacho() {}
-	Rectangle AreaTacho() { return Rectangle(x - 20, y - 20, width + 40, height + 40); }
+	Rectangle AreaTacho() { return Rectangle(x, y , width , height ); }
 	//inicio del area - hasta el final del baño + el area restante
 	void draw(Graphics^ g, Bitmap^ img) {
-		Rectangle corte = Rectangle(IDx * width, 0 * height, 64, 64);
+		Rectangle corte = Rectangle(IDx * width, 0 * height, width, height);
 		g->DrawImage(img, AreaRectangle(), corte, GraphicsUnit::Pixel);
 	}
 	//para obtener y / x, las funciones están en entidad (herencia)

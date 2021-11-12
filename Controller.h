@@ -97,14 +97,17 @@ public:
 				cleaner->setDx(0);
 		}
 	}
-	void Collision() {
-		
-	}
+	
 
 	void collision(Graphics^ g) {
 		//Verification
-		for (int i = 0; i < enemigos.size(); i++) {
-			
+		for (int i = 0; i < basuras.size(); i++) {
+			if (cleaner->AreaRectangle().IntersectsWith(basuras[i]->AreaRectangle())) {
+				basuras[i]->setVisible(false);
+				basuras.erase(basuras.begin() + i);
+				cleaner->setBolsa(cleaner->getBolsa()+1);
+			}
+
 		}
 
 		//Elimination
@@ -124,26 +127,12 @@ public:
 	}
 	
 
-	/*void entierro() {
-		for (int i = 0; i < basuras.size(); i++)
-			switch (basuras[i]->getTipoBasura())
-			{
-			case 0:
-				basuras[i]->setEstado(basuras[i]->getEstado()+1);
-
-			default:
-				break;
-			}
-			
-		
-	}*/
-
 	
 	Humano* getCleaner() { return cleaner; }
 	Enemigo* getEnemigo(int i) { return enemigos[i]; }
-	int  cantEnem() { return enemigos.size(); }
+	int  cantEnem() { return Convert::ToInt64(enemigos.size()); }
 	Basura* getBasura(int i) { return basuras[i]; }
-	int cantBasu() { return basuras.size(); }
-	int cantBaños() { return baños.size(); }
+	int cantBasu() { return Convert::ToInt64(basuras.size()); }
+	int cantBaños() { return Convert::ToInt64(baños.size()); }
 	
 };

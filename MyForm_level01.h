@@ -34,6 +34,7 @@ namespace trabajofinal {
 
 			controller = new Controller(imgCleaner);
 			controller->addEnemy(g, imgEnemy);
+			controller->addTacho(imgBasura,20,buffer->Graphics->VisibleClipBounds.Height-100);
 			contBaños = 0; contTachos = 1;
 		}
 		void ColocaNombre(String^ s)
@@ -396,6 +397,8 @@ namespace trabajofinal {
 	private: System::Void timer1_Tick_1(System::Object^ sender, System::EventArgs^ e) {
 		//clear
 		buffer->Graphics->Clear(Color::White);
+		//datos de menu
+		this->lbBolsa->Text=Convert::ToString(controller->getCleaner()->getBolsa());
 		//collision
 		controller->collision(buffer->Graphics);
 		//move (enemigos)
