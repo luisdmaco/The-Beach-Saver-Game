@@ -13,11 +13,11 @@ private:
 	vector<Enemigo*> enemigos;
 	vector<Bano*> baños;
 	Humano* cleaner;
+	
 
 public:
 	Controller(Bitmap^ imgCleaner) {
 		cleaner = new Humano(imgCleaner,100,100);
-		
 	}
 	~Controller() {}
 	void addEnemy(Graphics^ g,Bitmap^ imgEnemigo) {
@@ -107,4 +107,7 @@ public:
 
 
 	Humano* getCleaner() { return cleaner; }
+	Enemigo* getEnemigo(int i) { return enemigos[i]; }
+	int  cantEnem() { return enemigos.size(); }
+	
 };

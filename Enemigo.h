@@ -60,5 +60,8 @@ public:
 #pragma region Set-Get-Functions
 	int getPosicionX() { return x; } //usado para saber donde está x (desaparecer en una posición)
 	int getPosicionY() { return y; } //por si acaso
+	
+
+	int getHeight() { return height; }
 #pragma endregion
 };

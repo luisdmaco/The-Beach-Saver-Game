@@ -5,7 +5,7 @@ class Entidad {
 protected:
 	int x, y;
 	int dx, dy;
-	//bool visible; //qué?
+	bool visible; //sirve para controlar si una entidad es visible o no (util en colisiones con basura y enemigos al salir de pantalla)
 	int width, height;
 	int IDx;
 	
@@ -16,6 +16,7 @@ public:
 		x = y = 0; //sobreescribir en cada clase
 		width = height = 0; //sobreescribir en cada clase
 		IDx = 0; //sobreescribir en cada clase
+		visible = true;
 
 	}
 	~Entidad() {}

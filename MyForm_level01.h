@@ -51,6 +51,9 @@ namespace trabajofinal {
 		Bitmap^ imgBasura;
 		Bitmap^ imgEnemy;
 		String ^nombre;
+	private: System::Windows::Forms::Timer^ timerEnemy;
+	private: System::Windows::Forms::Timer^ timerBasura;
+	protected:
 		Controller* controller;
 
 
@@ -89,6 +92,8 @@ namespace trabajofinal {
 			this->components = (gcnew System::ComponentModel::Container());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->timerEnemy = (gcnew System::Windows::Forms::Timer(this->components));
+			this->timerBasura = (gcnew System::Windows::Forms::Timer(this->components));
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -103,6 +108,18 @@ namespace trabajofinal {
 			this->timer1->Enabled = true;
 			this->timer1->Interval = 50;
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm_level01::timer1_Tick_1);
+			// 
+			// timerEnemy
+			// 
+			this->timerEnemy->Enabled = true;
+			this->timerEnemy->Interval = 1000;
+			this->timerEnemy->Tick += gcnew System::EventHandler(this, &MyForm_level01::timerEnemy_Tick);
+			// 
+			// timerBasura
+			// 
+			this->timerBasura->Enabled = true;
+			this->timerBasura->Interval = 500;
+			this->timerBasura->Tick += gcnew System::EventHandler(this, &MyForm_level01::timerBasura_Tick);
 			// 
 			// MyForm_level01
 			// 
@@ -140,6 +157,20 @@ namespace trabajofinal {
 	private: System::Void MyForm_level01_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 		controller->MovimientoMonigote(false, e->KeyCode);
 	}
+	private: System::Void timerEnemy_Tick(System::Object^ sender, System::EventArgs^ e) {
+		controller->addEnemy(g,imgEnemy);
+		
+	}
+	private: System::Void timerBasura_Tick(System::Object^ sender, System::EventArgs^ e) {
+		
+		int i=rand() % controller->cantEnem();
+		controller->addbasura(imgBasura,controller->getEnemigo(i)->getPosicionX(), controller->getEnemigo(i)->getPosicionY()+(controller->getEnemigo(i)->getHeight())/2);
+	}
+	
+
+	//menu
+	//que spawneen cosas al comprar (dinero: 99999)
+	 //colisiones (eliminar enemigos cuando su hitbox desaparezca)
 };
 }
 

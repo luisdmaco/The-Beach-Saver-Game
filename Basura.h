@@ -2,17 +2,21 @@
 #include "Entidad.h"
 
 class Basura : public Entidad {
+private:
+	int tipoBasura;
 public:
 	Basura(Bitmap^ img, int x, int y) {
 		width = img->Width / 3;
-		height = img->Height;
+		height = img->Height / 3;
 		this->x = x;
 		this->y = y;
 		dx = dy = 0;
 		IDx = 0; //sirve para cambiar de estado en este caso
+		tipoBasura = rand() % 3;//son 3 filas, cada fila es una tipo diferente de fila
+		
 	}
 	void draw(Graphics^ g, Bitmap^ img) {
-		Rectangle corte = Rectangle(IDx * width, 0 * height, 64, 64);
+		Rectangle corte = Rectangle(IDx * width, tipoBasura * height, 40, 40);
 		g->DrawImage(img, AreaRectangle(), corte, GraphicsUnit::Pixel);
 	}
 	void cambioEstado(int milisegundos) { //implementar en timer (crear un for e ingresar el int a la función)
