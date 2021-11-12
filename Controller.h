@@ -100,14 +100,35 @@ public:
 	
 
 	void collision(Graphics^ g) {
-		//Verification
-		for (int i = 0; i < basuras.size(); i++) {
-			if (cleaner->AreaRectangle().IntersectsWith(basuras[i]->AreaRectangle())) {
-				basuras[i]->setVisible(false);
-				basuras.erase(basuras.begin() + i);
-				cleaner->setBolsa(cleaner->getBolsa()+1);
+		//colisiones directas
+		for (int i = 0; i < basuras.size(); i++) {//personaje con basura respecto a su bolsa
+			if (cleaner->getBolsa() != cleaner->getCapacidadBolsa())
+			{
+				if (cleaner->AreaRectangle().IntersectsWith(basuras[i]->AreaRectangle())) {
+					basuras[i]->setVisible(false);
+					basuras.erase(basuras.begin() + i);
+					cleaner->setBolsa(cleaner->getBolsa() + 1);
+				}
 			}
-
+		}
+		for (int i = 0; i < basuras.size(); i++)//radio de recoleccion automatica de tacho con basura //////PROPBLEMAPROPBLEMAPROPBLEMAPROPBLEMAPROPBLEMA///////////
+		{
+			for (int g = 0; g < tachos.size(); g++)
+			{
+				if (basuras[i]->AreaRectangle().IntersectsWith(tachos[g]->AreaRecoleccionTacho())) {
+					basuras[i]->setVisible(false);
+					basuras.erase(basuras.begin() + i);
+					cleaner->setDinero(cleaner->getDinero() + 10);
+				}
+			}
+			
+		}
+		for (int i = 0; i < tachos.size(); i++)//radio de tacho interactua con personaje
+		{
+			if (tachos[i]->AreaRecoleccionTacho().IntersectsWith(cleaner->AreaRectangle())) {
+				cleaner->setDinero(cleaner->getDinero() + (cleaner->getBolsa() * cleaner->getCapacidadBolsa()));//el dinero = el dinero actual + (capacidad de bolsa*cantidad de basura en la bolsa*10(dinero que otorga cada basura))
+				cleaner->setBolsa(0);
+			}
 		}
 
 		//Elimination

@@ -399,6 +399,7 @@ namespace trabajofinal {
 		buffer->Graphics->Clear(Color::White);
 		//datos de menu
 		this->lbBolsa->Text=Convert::ToString(controller->getCleaner()->getBolsa());
+		this->lbDinero->Text = Convert::ToString(controller->getCleaner()->getDinero());
 		//collision
 		controller->collision(buffer->Graphics);
 		//move (enemigos)

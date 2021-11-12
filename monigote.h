@@ -13,6 +13,7 @@ private:
 	SpritePlayer accion;
 	int dinero;
 	int bolsa;
+	int capacidadBolsa;
 public:
 	Humano(Bitmap^ img, int x, int y) {
 		height = img->Height / 4; //alto = alto de la imagen entre 4 (un sprite)
@@ -21,8 +22,9 @@ public:
 		accion = Abajo; //default acción mostrada en pantalla = sprite abajo
 		this->x = x; //set x en la posicion de pantalla deseada
 		this->y = y; //set y en la posicion de pantalla deseada
-		dinero = 99999;
+		dinero = 0;
 		bolsa = 10;
+		capacidadBolsa = 20;
 	}
 	~Humano(){}
 
@@ -67,6 +69,9 @@ public:
 
 	void setBolsa(int v) { bolsa = v; }
 	int getBolsa() { return bolsa; }
+
+	void setCapacidadBolsa(int v) { capacidadBolsa = v; }
+	int getCapacidadBolsa() { return capacidadBolsa; }
 	
 #pragma endregion
 };

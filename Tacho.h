@@ -13,6 +13,7 @@ public:
 	}
 	~Tacho() {}
 	Rectangle AreaTacho() { return Rectangle(x, y , width , height ); }
+	Rectangle AreaRecoleccionTacho() { return Rectangle(x - 20, y - 20, width + 30, height +30); }
 	//inicio del area - hasta el final del baño + el area restante
 	void draw(Graphics^ g, Bitmap^ img) {
 		Rectangle corte = Rectangle(IDx * width, 0 * height, width, height);
