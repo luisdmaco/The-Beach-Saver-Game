@@ -19,7 +19,7 @@ public:
 		this->accion = accion;
 	}
 	~Enemigo(){}
-	void Draw(Graphics^ g, Bitmap^ img) {
+	void draw(Graphics^ g, Bitmap^ img) {
 		Rectangle cut = Rectangle(IDx * width, accion * height, 64, 64);
 		g->DrawImage(img, AreaRectangle(), cut, GraphicsUnit::Pixel); 
 		if (dx != 0 || dy != 0) { //si se mueve

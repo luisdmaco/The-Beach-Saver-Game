@@ -53,7 +53,7 @@ public:
 	}
 	void moverTodo(Graphics^g , Bitmap^ img) {
 		for (int i; i < enemigos.size(); i++)
-			enemigos[i]->Draw(g, img);
+			enemigos[i]->draw(g, img);
 	}
 	void Collision() {
 		
