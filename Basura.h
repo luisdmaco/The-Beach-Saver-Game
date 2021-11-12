@@ -29,6 +29,8 @@ public:
 			IDx++;
 		if (tiempo == 130)//13segundos
 			IDx++;
+		if (IDx >= 3)
+			visible = false;
 
 	}
 #pragma region Set-Get-Functions

@@ -397,7 +397,7 @@ namespace trabajofinal {
 		//clear
 		buffer->Graphics->Clear(Color::White);
 		//collision
-		controller->collision();
+		controller->collision(buffer->Graphics);
 		//move (enemigos)
 		controller->moverTodo(buffer->Graphics);
 		//draw
@@ -447,7 +447,7 @@ namespace trabajofinal {
 
 	}
 	//averiguar como ejecutar varias veces un click
-	//colisiones (eliminar enemigos cuando su hitbox desaparezca)/ cuando la basura sea estado 3 desaparezca del arreglo
+	//colisiones (personaje no pueda chocar con baño ni con tacho )
 };
 }
 

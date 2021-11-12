@@ -101,20 +101,23 @@ public:
 		
 	}
 
-	void collision() {
+	void collision(Graphics^ g) {
 		//Verification
 		for (int i = 0; i < enemigos.size(); i++) {
-			if (cleaner->AreaNextRectangle().IntersectsWith(enemigos[i]->AreaRectangle())) {
-				
-				enemigos[i]->setVisible(true);
-
-			}
+			
 		}
 
 		//Elimination
+		//enemigos (fuera del mapa)
 		for (int i = 0; i < enemigos.size(); i++) {
 			if (!enemigos[i]->getVisible()) {
 				enemigos.erase(enemigos.begin() + i);
+			}
+		}
+		//basuras cuando pasan de estado enterrado
+		for (int i = 0; i < basuras.size(); i++) {
+			if (!basuras[i]->getVisible()) {
+				basuras.erase(basuras.begin() + i);
 			}
 		}
 
