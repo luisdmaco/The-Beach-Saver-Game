@@ -10,10 +10,11 @@ class Enemigo : public Entidad {
 private:
 	SpriteEnemigo accion;
 public:
-	Enemigo(Bitmap^ img, int y, SpriteEnemigo accion) { //y será rand en el controller
+	Enemigo(Bitmap^ img, int x,int y, SpriteEnemigo accion) { //y será rand en el controller /huarzu:agregue x pues spwaneara desde ambos lados
 		height = img->Height / 2; //2 filas   //accion será hacia dónde se mueve el enemigo (izq. o der.)
 		width = img->Width / 4; //4 columnas
 		this->y = y;
+		this->x = x;
 		dx = dy = 0;
 		this->accion = accion;
 	}
