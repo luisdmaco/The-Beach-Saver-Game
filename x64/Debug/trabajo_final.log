@@ -1,14 +1,20 @@
 ﻿  MyForm_empezar.cpp
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(111,18): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(141,18): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(143,17): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(144,19): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   MyForm_level01.cpp
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(111,18): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(141,18): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(143,17): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(144,19): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   MyForm_principal.cpp
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(28,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(111,18): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(141,18): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(143,17): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(144,19): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   Generando código...
   MyForm_creditos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo

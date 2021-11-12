@@ -60,25 +60,25 @@ public:
 		int v = 5; //value == dx / dy
 		if (accion == true)
 		{
-			if (tecla == Keys::Up )
+			if (tecla == Keys::W )
 			{
 				cleaner->setDy(-v);
 				cleaner->setAccion(Arriba);
 			}
 				
-			else if (tecla == Keys::Down )
+			else if (tecla == Keys::S )
 			{
 				cleaner->setDy(v);
 				cleaner->setAccion(Abajo);
 			}
 
-			else if (tecla == Keys::Left )
+			else if (tecla == Keys::A )
 			{
 				cleaner->setDx(-v);
 				cleaner->setAccion(Izquierda);
 			}
 				
-			else if (tecla == Keys::Right )
+			else if (tecla == Keys::D )
 			{
 				cleaner->setDx(v);
 				cleaner->setAccion(Derecha);
@@ -87,13 +87,13 @@ public:
 		}
 		else
 		{
-			if (tecla == Keys::Up )
+			if (tecla == Keys::W )
 				cleaner->setDy(0);
-			else if (tecla == Keys::Down )
+			else if (tecla == Keys::S )
 				cleaner->setDy(0);
-			else if (tecla == Keys::Left)
+			else if (tecla == Keys::A)
 				cleaner->setDx(0);
-			else if (tecla == Keys::Right )
+			else if (tecla == Keys::D )
 				cleaner->setDx(0);
 		}
 	}
@@ -101,13 +101,46 @@ public:
 		
 	}
 
+	void collision() {
+		//Verification
+		for (int i = 0; i < enemigos.size(); i++) {
+			if (cleaner->AreaNextRectangle().IntersectsWith(enemigos[i]->AreaRectangle())) {
+				
+				enemigos[i]->setVisible(true);
+
+			}
+		}
+
+		//Elimination
+		for (int i = 0; i < enemigos.size(); i++) {
+			if (!enemigos[i]->getVisible()) {
+				enemigos.erase(enemigos.begin() + i);
+			}
+		}
+
+	}
 	
 
+	/*void entierro() {
+		for (int i = 0; i < basuras.size(); i++)
+			switch (basuras[i]->getTipoBasura())
+			{
+			case 0:
+				basuras[i]->setEstado(basuras[i]->getEstado()+1);
 
+			default:
+				break;
+			}
+			
+		
+	}*/
 
-
+	
 	Humano* getCleaner() { return cleaner; }
 	Enemigo* getEnemigo(int i) { return enemigos[i]; }
 	int  cantEnem() { return enemigos.size(); }
+	Basura* getBasura(int i) { return basuras[i]; }
+	int cantBasu() { return basuras.size(); }
+	int cantBaños() { return baños.size(); }
 	
 };

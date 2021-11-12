@@ -8,7 +8,7 @@ protected:
 	bool visible; //sirve para controlar si una entidad es visible o no (util en colisiones con basura y enemigos al salir de pantalla)
 	int width, height;
 	int IDx;
-	
+
 public:
 	Entidad() {
 		x = y = 0; //sobreescribir en cada clase
@@ -24,9 +24,9 @@ public:
 		g->DrawImage(img, AreaRectangle());
 	}
 	virtual void move() { //move default básico, en cada clase se va a sobreescribir
-		
+
 	}
-	Rectangle AreaRectangle() { return Rectangle(x, y, width, height); } 
+	Rectangle AreaRectangle() { return Rectangle(x, y, width, height); }
 	//obtener area de cada sprite en cualquier lugar
 	Rectangle AreaNextRectangle() { return Rectangle(x + dx, y + dy, width, height); }
 	//obtener siguiente area de cada sprite en cualquier lugar (colisiones)
@@ -41,6 +41,8 @@ public:
 	}
 	int getX() { return x; }
 	int getY() { return y; }
+	void setVisible(bool v) { visible = v; }
+	int getVisible() { return visible; }
 #pragma endregion
 };
 

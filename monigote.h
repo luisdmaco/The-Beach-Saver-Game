@@ -11,6 +11,8 @@ enum SpritePlayer {
 class Humano : public Entidad {
 private:
 	SpritePlayer accion;
+	int dinero;
+	int bolsa;
 public:
 	Humano(Bitmap^ img, int x, int y) {
 		height = img->Height / 4; //alto = alto de la imagen entre 4 (un sprite)
@@ -19,6 +21,8 @@ public:
 		accion = Abajo; //default acción mostrada en pantalla = sprite abajo
 		this->x = x; //set x en la posicion de pantalla deseada
 		this->y = y; //set y en la posicion de pantalla deseada
+		dinero = 99999;
+		bolsa = 10;
 	}
 	~Humano(){}
 

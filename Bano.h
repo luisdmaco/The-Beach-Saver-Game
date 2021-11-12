@@ -20,4 +20,5 @@ public:
 	}
 
 	//para obtener y / x, las funciones están en entidad (herencia)
+	
 };

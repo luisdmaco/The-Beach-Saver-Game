@@ -63,5 +63,6 @@ public:
 	
 
 	int getHeight() { return height; }
+
 #pragma endregion
 };
