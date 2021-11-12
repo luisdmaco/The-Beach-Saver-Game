@@ -51,59 +51,14 @@ public:
 		if (y + dy > 0 && y + dy + height < g->VisibleClipBounds.Height) {
 			y += dy;
 		}
+		
 	}
-	void MovimientoMonigote(bool action, Keys key, Graphics^ g) { //ESTA FUNCIÓN SE MOVERÁ A CONTROLLER
-		int value = 5; //value == dx / dy
-		if (action == true)
-		{
-			switch (key)
-			{
-			case Keys::Left: //flecha izquierda
-				setDx(-value); //nuevo valor de dx;
-				setAccion(Izquierda);
-				move(g); //accion derecha (movimiento y muestra)
-				break; //mover
-				//así para todos
-			case Keys::Up: //flecha arriba
-				setDy(-value);
-				setAccion(Arriba);
-				move(g);
-				break;
-			case Keys::Right: //flecha derecha
-				setDx(value); 
-				setAccion(Derecha); 
-				move(g); 
-				break;
-			case Keys::Down: //flecha abajo
-				setDy(value);
-				setAccion(Abajo);
-				move(g);
-				break;
-			}
-		}
-		else //si bool es falso (implementado en keyup)
-		{
-			switch (key)
-			{
-			case Keys::Left:
-				setDx(0); //dx / dy == 0
-				break;
-			case Keys::Up:
-				setDy(0);
-				break;
-			case Keys::Right:
-				setDx(0);
-				break;
-			case Keys::Down:
-				setDy(0);
-				break;
-			}
-		}
-	}
+	
 #pragma region Set-Get-Functions
 	void setAccion(SpritePlayer value) {
 		accion = value;
 	}
+	
 #pragma endregion
 };
 

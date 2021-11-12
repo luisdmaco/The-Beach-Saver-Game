@@ -23,9 +23,9 @@ public:
 	void addEnemy(Graphics^ g,Bitmap^ imgEnemigo) {
 		int a = rand()% 2 + 1;
 		if (a==1)//si sale 1 spawnea a la izquierda y se movera hacia la derecha
-			enemigos.push_back(new Enemigo(imgEnemigo, 0 , rand() % 20 + 1, derecha));
+			enemigos.push_back(new Enemigo(imgEnemigo, 0, rand() % 500 + 60, derecha));//-50 es para que aparezca fuera de la vista del jugador
 		else//viceversa
-			enemigos.push_back(new Enemigo(imgEnemigo, g->VisibleClipBounds.Width,rand() % 100, izquierda));
+			enemigos.push_back(new Enemigo(imgEnemigo, g->VisibleClipBounds.Width-50, rand() % 500 + 60, izquierda));
 	}
 	void addBaño(Bitmap^ img,int x, int y) {
 		baños.push_back(new Bano(img, x, y));
@@ -51,9 +51,51 @@ public:
 			basuras[i]->draw(g, bmpBasura);
 		}
 	}
-	void moverTodo(Graphics^g , Bitmap^ img) {
-		for (int i; i < enemigos.size(); i++)
-			enemigos[i]->draw(g, img);
+	void moverTodo(Graphics^g) {
+		for (int i = 0; i < enemigos.size(); i++)
+			enemigos[i]->move(g);
+		cleaner->move(g);//aqui se le pone un condicional para no chocar con opbstaculos (huarzu: fijarse archivo C1)
+	}
+	void MovimientoMonigote(bool accion, Keys tecla) { //ESTA FUNCIÓN SE MOVERÁ A CONTROLLER
+		int v = 5; //value == dx / dy
+		if (accion == true)
+		{
+			if (tecla == Keys::Up || tecla == Keys::W)
+			{
+				cleaner->setDy(-v);
+				cleaner->setAccion(Arriba);
+			}
+				
+			else if (tecla == Keys::Down || tecla == Keys::S)
+			{
+				cleaner->setDy(v);
+				cleaner->setAccion(Abajo);
+			}
+
+			else if (tecla == Keys::Left || tecla == Keys::A)
+			{
+				cleaner->setDx(-v);
+				cleaner->setAccion(Izquierda);
+			}
+				
+			else if (tecla == Keys::Right || tecla == Keys::D)
+			{
+				cleaner->setDx(v);
+				cleaner->setAccion(Derecha);
+			}
+				
+		}
+		else
+		{
+			if (tecla == Keys::Up || tecla == Keys::A)
+				cleaner->setDy(0);
+			else if (tecla == Keys::Down || tecla == Keys::S)
+				cleaner->setDy(0);
+			else if (tecla == Keys::Left || tecla == Keys::A)
+				cleaner->setDx(0);
+			else if (tecla == Keys::Right || tecla == Keys::D)
+				cleaner->setDx(0);
+		}
 	}
 	void Collision() {
 		
