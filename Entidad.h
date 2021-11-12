@@ -8,6 +8,7 @@ protected:
 	//bool visible; //qué?
 	int width, height;
 	int IDx;
+	
 public:
 	Entidad() {
 		x = y = 0; //sobreescribir en cada clase

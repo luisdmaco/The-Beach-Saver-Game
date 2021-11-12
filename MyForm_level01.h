@@ -29,11 +29,11 @@ namespace trabajofinal {
 			Mapa = gcnew Bitmap("mapa.jpeg");
 			imgTacho = gcnew Bitmap("tacho.png");
 			imgBaño = gcnew Bitmap("baño.png");
-			//imgBasura = gcnew Bitmap("basura.png");
+			imgBasura = gcnew Bitmap("basura.png");
 			imgEnemy = gcnew Bitmap("enemy.png");
 
 			controller = new Controller(imgCleaner);
-
+			controller->addEnemy(g, imgEnemy);
 		}
 		void ColocaNombre(String^ s)
 		{
@@ -93,24 +93,23 @@ namespace trabajofinal {
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(-4, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Location = System::Drawing::Point(-3, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1060, 689);
+			this->panel1->Size = System::Drawing::Size(795, 560);
 			this->panel1->TabIndex = 0;
 			// 
 			// timer1
 			// 
 			this->timer1->Enabled = true;
+			this->timer1->Interval = 50;
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm_level01::timer1_Tick_1);
 			// 
 			// MyForm_level01
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1060, 704);
+			this->ClientSize = System::Drawing::Size(795, 572);
 			this->Controls->Add(this->panel1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm_level01";
 			this->Text = L"MyForm_level01";
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm_level01::MyForm_level01_KeyDown);
@@ -131,15 +130,15 @@ namespace trabajofinal {
 		buffer->Graphics->DrawString(nombre, gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 120, 10);
 		buffer->Graphics->DrawString("USUARIO : ", gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 50, 10);
 		//objmonigote->draw(buffer->Graphics, imgCleaner);
-		controller->dibujarTodo(buffer->Graphics, imgCleaner, imgEnemy, imgBaño, imgTacho, imgBasura);//falta la imagen de basura unu
+		controller->dibujarTodo(buffer->Graphics, imgCleaner, imgEnemy, imgBaño, imgTacho, imgBasura);
 		//render
 		buffer->Render(g);
 	}
 	private: System::Void MyForm_level01_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 		controller->getCleaner()->MovimientoMonigote(true, e->KeyCode, g);
 	}
-private: System::Void MyForm_level01_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-	controller->getCleaner()->MovimientoMonigote(false, e->KeyCode, g);
-}
+	private: System::Void MyForm_level01_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+		controller->getCleaner()->MovimientoMonigote(false, e->KeyCode, g);
+	}
 };
 }

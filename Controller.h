@@ -23,7 +23,7 @@ public:
 	void addEnemy(Graphics^ g,Bitmap^ imgEnemigo) {
 		int a = rand()% 2 + 1;
 		if (a==1)//si sale 1 spawnea a la izquierda y se movera hacia la derecha
-			enemigos.push_back(new Enemigo(imgEnemigo, 0 , rand() % 100, derecha));
+			enemigos.push_back(new Enemigo(imgEnemigo, 0 , rand() % 20 + 1, derecha));
 		else//viceversa
 			enemigos.push_back(new Enemigo(imgEnemigo, g->VisibleClipBounds.Width,rand() % 100, izquierda));
 	}
@@ -39,7 +39,7 @@ public:
 	void dibujarTodo(Graphics^g, Bitmap^ bmpClenaer, Bitmap^ bmpEnemy,  Bitmap^ bmpBaño, Bitmap^ bmpTacho, Bitmap^ bmpBasura) {
 		cleaner->draw(g, bmpClenaer);
 		for (int i = 0; i < enemigos.size(); i++) {
-			enemigos[i]->draw(g, bmpEnemy);
+			enemigos[i]->Draw(g, bmpEnemy);
 		}
 		for (int i = 0; i < baños.size(); i++) {
 			baños[i]->draw(g, bmpBaño);
