@@ -16,3 +16,21 @@ C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo
 C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_principal.resources
 C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.vcxproj.GenerateResource.cache
 C:\Users\´Danilo\Documents\GitHub\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.vcxproj.AssemblyReference.cache
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_creditos.resources
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_empezar.resources
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_instrucciones.resources
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_level01.resources
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_level_02.resources
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_principal.resources
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.vcxproj.GenerateResource.cache
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.vcxproj.AssemblyReference.cache
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_creditos.resources
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_empezar.resources
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_instrucciones.resources
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_level01.resources
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_level_02.resources
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajofinal.MyForm_principal.resources
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.vcxproj.GenerateResource.cache
+C:\Users\Luis Maco\Desktop\Programming\C++ - UPC\Programacion II - ejercicios\TRABAJO FINAL\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe

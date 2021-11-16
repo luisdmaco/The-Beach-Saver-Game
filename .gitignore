@@ -10,9 +10,11 @@
 # Precompiled Headers
 *.gch
 *.pch
+*.ipch
 
 # Compiled Dynamic libraries
 *.so
+*.suo
 *.dylib
 *.dll
 
@@ -30,3 +32,8 @@
 *.exe
 *.out
 *.app
+*.jfm
+*.opendb
+*.db
+*.db-shm
+*.db-wal
