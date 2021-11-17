@@ -95,6 +95,7 @@ namespace trabajofinal {
 	private: System::Windows::Forms::Timer^ timerMicrobiologicoBaños;
 	private: System::Windows::Forms::Label^ lbCapacidadBolsa;
 	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::ProgressBar^ progressBar1;
 
 
 	protected:
@@ -155,6 +156,7 @@ namespace trabajofinal {
 			this->lbBuyTacho = (gcnew System::Windows::Forms::Label());
 			this->lbBuyBaño = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->progressBar1 = (gcnew System::Windows::Forms::ProgressBar());
 			this->lbBasura = (gcnew System::Windows::Forms::Label());
 			this->lbBaños = (gcnew System::Windows::Forms::Label());
 			this->lbMicrobiologico = (gcnew System::Windows::Forms::Label());
@@ -171,10 +173,9 @@ namespace trabajofinal {
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(-3, 1);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Location = System::Drawing::Point(-2, 1);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(933, 862);
+			this->panel1->Size = System::Drawing::Size(700, 700);
 			this->panel1->TabIndex = 0;
 			// 
 			// timer1
@@ -207,10 +208,9 @@ namespace trabajofinal {
 			this->panel2->Controls->Add(this->groupBox2);
 			this->panel2->Controls->Add(this->groupBox1);
 			this->panel2->Controls->Add(this->label1);
-			this->panel2->Location = System::Drawing::Point(939, 5);
-			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel2->Location = System::Drawing::Point(704, 4);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(237, 858);
+			this->panel2->Size = System::Drawing::Size(178, 697);
 			this->panel2->TabIndex = 1;
 			// 
 			// groupBox3
@@ -223,11 +223,9 @@ namespace trabajofinal {
 			this->groupBox3->Controls->Add(this->label4);
 			this->groupBox3->Controls->Add(this->label3);
 			this->groupBox3->Controls->Add(this->label2);
-			this->groupBox3->Location = System::Drawing::Point(4, 682);
-			this->groupBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox3->Location = System::Drawing::Point(3, 554);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox3->Size = System::Drawing::Size(219, 162);
+			this->groupBox3->Size = System::Drawing::Size(164, 132);
 			this->groupBox3->TabIndex = 3;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"RECURSOS";
@@ -237,20 +235,18 @@ namespace trabajofinal {
 			this->lbCapacidadBolsa->AutoSize = true;
 			this->lbCapacidadBolsa->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbCapacidadBolsa->Location = System::Drawing::Point(147, 100);
-			this->lbCapacidadBolsa->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbCapacidadBolsa->Location = System::Drawing::Point(110, 81);
 			this->lbCapacidadBolsa->Name = L"lbCapacidadBolsa";
-			this->lbCapacidadBolsa->Size = System::Drawing::Size(21, 24);
+			this->lbCapacidadBolsa->Size = System::Drawing::Size(17, 18);
 			this->lbCapacidadBolsa->TabIndex = 7;
 			this->lbCapacidadBolsa->Text = L"0";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(8, 100);
-			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label8->Location = System::Drawing::Point(6, 81);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(137, 17);
+			this->label8->Size = System::Drawing::Size(104, 13);
 			this->label8->TabIndex = 6;
 			this->label8->Text = L"Capacidad de bolsa:";
 			// 
@@ -259,10 +255,9 @@ namespace trabajofinal {
 			this->lbVelocidad->AutoSize = true;
 			this->lbVelocidad->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbVelocidad->Location = System::Drawing::Point(93, 116);
-			this->lbVelocidad->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbVelocidad->Location = System::Drawing::Point(70, 94);
 			this->lbVelocidad->Name = L"lbVelocidad";
-			this->lbVelocidad->Size = System::Drawing::Size(21, 24);
+			this->lbVelocidad->Size = System::Drawing::Size(17, 18);
 			this->lbVelocidad->TabIndex = 5;
 			this->lbVelocidad->Text = L"5";
 			// 
@@ -271,10 +266,9 @@ namespace trabajofinal {
 			this->lbBolsa->AutoSize = true;
 			this->lbBolsa->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbBolsa->Location = System::Drawing::Point(147, 70);
-			this->lbBolsa->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbBolsa->Location = System::Drawing::Point(110, 57);
 			this->lbBolsa->Name = L"lbBolsa";
-			this->lbBolsa->Size = System::Drawing::Size(21, 24);
+			this->lbBolsa->Size = System::Drawing::Size(17, 18);
 			this->lbBolsa->TabIndex = 4;
 			this->lbBolsa->Text = L"0";
 			// 
@@ -283,40 +277,36 @@ namespace trabajofinal {
 			this->lbDinero->AutoSize = true;
 			this->lbDinero->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbDinero->Location = System::Drawing::Point(72, 32);
-			this->lbDinero->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbDinero->Location = System::Drawing::Point(54, 26);
 			this->lbDinero->Name = L"lbDinero";
-			this->lbDinero->Size = System::Drawing::Size(21, 24);
+			this->lbDinero->Size = System::Drawing::Size(17, 18);
 			this->lbDinero->TabIndex = 3;
 			this->lbDinero->Text = L"0";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(9, 121);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(7, 98);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(74, 17);
+			this->label4->Size = System::Drawing::Size(57, 13);
 			this->label4->TabIndex = 2;
 			this->label4->Text = L"Velocidad:";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(8, 75);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(6, 61);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(131, 17);
+			this->label3->Size = System::Drawing::Size(98, 13);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"Basura en la mano:";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(9, 37);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(7, 30);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(54, 17);
+			this->label2->Size = System::Drawing::Size(41, 13);
 			this->label2->TabIndex = 0;
 			this->label2->Text = L"Dinero:";
 			// 
@@ -325,11 +315,9 @@ namespace trabajofinal {
 			this->groupBox2->Controls->Add(this->lbBuyBolsa);
 			this->groupBox2->Controls->Add(this->lbBuyTacho);
 			this->groupBox2->Controls->Add(this->lbBuyBaño);
-			this->groupBox2->Location = System::Drawing::Point(4, 287);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox2->Location = System::Drawing::Point(3, 233);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox2->Size = System::Drawing::Size(219, 388);
+			this->groupBox2->Size = System::Drawing::Size(164, 315);
 			this->groupBox2->TabIndex = 2;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"TIENDA (cerrado por covid :c)";
@@ -340,10 +328,9 @@ namespace trabajofinal {
 			this->lbBuyBolsa->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->lbBuyBolsa->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbBuyBolsa->Location = System::Drawing::Point(3, 134);
-			this->lbBuyBolsa->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbBuyBolsa->Location = System::Drawing::Point(2, 109);
 			this->lbBuyBolsa->Name = L"lbBuyBolsa";
-			this->lbBuyBolsa->Size = System::Drawing::Size(182, 18);
+			this->lbBuyBolsa->Size = System::Drawing::Size(145, 14);
 			this->lbBuyBolsa->TabIndex = 2;
 			this->lbBuyBolsa->Text = L"Ampliar Bolsa (S/.750)";
 			this->lbBuyBolsa->Click += gcnew System::EventHandler(this, &MyForm_level01::lbBuyBolsa_Click);
@@ -354,10 +341,9 @@ namespace trabajofinal {
 			this->lbBuyTacho->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->lbBuyTacho->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbBuyTacho->Location = System::Drawing::Point(4, 79);
-			this->lbBuyTacho->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbBuyTacho->Location = System::Drawing::Point(3, 64);
 			this->lbBuyTacho->Name = L"lbBuyTacho";
-			this->lbBuyTacho->Size = System::Drawing::Size(191, 18);
+			this->lbBuyTacho->Size = System::Drawing::Size(152, 14);
 			this->lbBuyTacho->TabIndex = 1;
 			this->lbBuyTacho->Text = L"Comprar Tacho (S/.350)";
 			this->lbBuyTacho->Click += gcnew System::EventHandler(this, &MyForm_level01::lbBuyTacho_Click);
@@ -368,40 +354,47 @@ namespace trabajofinal {
 			this->lbBuyBaño->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->lbBuyBaño->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbBuyBaño->Location = System::Drawing::Point(4, 32);
-			this->lbBuyBaño->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbBuyBaño->Location = System::Drawing::Point(3, 26);
 			this->lbBuyBaño->Name = L"lbBuyBaño";
-			this->lbBuyBaño->Size = System::Drawing::Size(182, 18);
+			this->lbBuyBaño->Size = System::Drawing::Size(145, 14);
 			this->lbBuyBaño->TabIndex = 0;
 			this->lbBuyBaño->Text = L"Comprar Baño (S/.650)";
 			this->lbBuyBaño->Click += gcnew System::EventHandler(this, &MyForm_level01::lbBuyBaño_Click);
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->progressBar1);
 			this->groupBox1->Controls->Add(this->lbBasura);
 			this->groupBox1->Controls->Add(this->lbBaños);
 			this->groupBox1->Controls->Add(this->lbMicrobiologico);
 			this->groupBox1->Controls->Add(this->label7);
 			this->groupBox1->Controls->Add(this->label6);
 			this->groupBox1->Controls->Add(this->label5);
-			this->groupBox1->Location = System::Drawing::Point(4, 98);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Location = System::Drawing::Point(3, 80);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox1->Size = System::Drawing::Size(219, 181);
+			this->groupBox1->Size = System::Drawing::Size(164, 147);
 			this->groupBox1->TabIndex = 1;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Salubridad de la Playa";
+			// 
+			// progressBar1
+			// 
+			this->progressBar1->ForeColor = System::Drawing::Color::Lime;
+			this->progressBar1->Location = System::Drawing::Point(10, 56);
+			this->progressBar1->Maximum = 500;
+			this->progressBar1->Name = L"progressBar1";
+			this->progressBar1->Size = System::Drawing::Size(148, 23);
+			this->progressBar1->TabIndex = 9;
+			this->progressBar1->Value = 2;
 			// 
 			// lbBasura
 			// 
 			this->lbBasura->AutoSize = true;
 			this->lbBasura->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbBasura->Location = System::Drawing::Point(127, 126);
-			this->lbBasura->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbBasura->Location = System::Drawing::Point(110, 113);
 			this->lbBasura->Name = L"lbBasura";
-			this->lbBasura->Size = System::Drawing::Size(21, 24);
+			this->lbBasura->Size = System::Drawing::Size(17, 18);
 			this->lbBasura->TabIndex = 8;
 			this->lbBasura->Text = L"0";
 			// 
@@ -410,10 +403,9 @@ namespace trabajofinal {
 			this->lbBaños->AutoSize = true;
 			this->lbBaños->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbBaños->Location = System::Drawing::Point(127, 74);
-			this->lbBaños->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbBaños->Location = System::Drawing::Point(110, 86);
 			this->lbBaños->Name = L"lbBaños";
-			this->lbBaños->Size = System::Drawing::Size(21, 24);
+			this->lbBaños->Size = System::Drawing::Size(17, 18);
 			this->lbBaños->TabIndex = 7;
 			this->lbBaños->Text = L"0";
 			// 
@@ -422,40 +414,36 @@ namespace trabajofinal {
 			this->lbMicrobiologico->AutoSize = true;
 			this->lbMicrobiologico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbMicrobiologico->Location = System::Drawing::Point(99, 36);
-			this->lbMicrobiologico->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbMicrobiologico->Location = System::Drawing::Point(66, 29);
 			this->lbMicrobiologico->Name = L"lbMicrobiologico";
-			this->lbMicrobiologico->Size = System::Drawing::Size(27, 29);
+			this->lbMicrobiologico->Size = System::Drawing::Size(21, 24);
 			this->lbMicrobiologico->TabIndex = 6;
 			this->lbMicrobiologico->Text = L"0";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(0, 132);
-			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label7->Location = System::Drawing::Point(3, 117);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(116, 17);
+			this->label7->Size = System::Drawing::Size(87, 13);
 			this->label7->TabIndex = 5;
 			this->label7->Text = L"Basura recogida:";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(0, 79);
-			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Location = System::Drawing::Point(3, 86);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(126, 17);
+			this->label6->Size = System::Drawing::Size(95, 13);
 			this->label6->TabIndex = 4;
 			this->label6->Text = L"Numero de Baños:";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(4, 20);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Location = System::Drawing::Point(3, 16);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(196, 17);
+			this->label5->Size = System::Drawing::Size(148, 13);
 			this->label5->TabIndex = 3;
 			this->label5->Text = L"Nivel microbiologico del agua:";
 			// 
@@ -464,11 +452,10 @@ namespace trabajofinal {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Stencil", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(39, 17);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(29, 14);
 			this->label1->Name = L"label1";
-			this->label1->Padding = System::Windows::Forms::Padding(27, 6, 27, 6);
-			this->label1->Size = System::Drawing::Size(119, 36);
+			this->label1->Padding = System::Windows::Forms::Padding(20, 5, 20, 5);
+			this->label1->Size = System::Drawing::Size(93, 29);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"MENU";
 			// 
@@ -480,12 +467,11 @@ namespace trabajofinal {
 			// 
 			// MyForm_level01
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1164, 864);
+			this->ClientSize = System::Drawing::Size(873, 609);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm_level01";
 			this->Text = L"MyForm_level01";
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm_level01::MyForm_level01_KeyDown);
@@ -509,6 +495,7 @@ namespace trabajofinal {
 		this->lbBolsa->Text=Convert::ToString(controller->getCleaner()->getBolsa());
 		this->lbCapacidadBolsa->Text=Convert::ToString(controller->getCleaner()->getCapacidadBolsa());
 		this->lbDinero->Text = Convert::ToString(controller->getCleaner()->getDinero());
+		this->progressBar1->Value = controller->getMicrobiologico(); // funcion para la barra del nvel microbiologico
 		this->lbMicrobiologico->Text = Convert::ToString(controller->getMicrobiologico());
 		this->lbBaños->Text = Convert::ToString(controller->cantBaños());
 		this->lbBasura->Text = Convert::ToString(controller->getLimpiezaPlaya());
@@ -533,11 +520,24 @@ namespace trabajofinal {
 			timerEntierro->Enabled = false;
 			timerMicrobiologicoBaños->Enabled = false;
 			timerBasura->Enabled = false;
-
+			progressBar1->Enabled = false;
+			MessageBox::Show("Ganaste");
 			MyForm_creditos^ Ii = gcnew MyForm_creditos();
 			this->Hide();
 			Ii->ShowDialog();
 			this->Close();
+		}
+
+		if (controller->getMicrobiologico() < 0)  // funcion opcional de perder 
+		{
+			timer1->Enabled = false;
+			timerBasura->Enabled = false;
+			timerEnemy->Enabled = false;
+			timerEntierro->Enabled = false;
+			timerMicrobiologicoBaños->Enabled = false;
+			timerBasura->Enabled = false;
+			progressBar1->Enabled = false;
+			MessageBox::Show("Game Over");
 		}
 		
 	}
