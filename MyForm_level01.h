@@ -691,11 +691,11 @@ namespace trabajofinal {
 	 private: System::Void timerMicrobiologicoBaños_Tick(System::Object^ sender, System::EventArgs^ e) {
 		 controller->addNivelMicrobiologico();
 	 }
-	private: System::Void lbBuyBaño_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void lbBuyBaño_Click(System::Object^ sender, System::EventArgs^ e) {//DESHABILITADO PUES SE USA TECLAS
 		
 		/*controller->addBaño(imgBaño, 600 ,555);*/ //no reconoce a la colision
 	}
-	private: System::Void lbBuyTacho_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void lbBuyTacho_Click(System::Object^ sender, System::EventArgs^ e) {//DESHABILITADO PUES AHORA SE USA TECLAS
 		/*controller->addTacho(imgTacho, 100, buffer->Graphics->VisibleClipBounds.Height - 500);*/ //no reconoloce la colison y tpmko al vector al parecer (observacion)
 	}
 
