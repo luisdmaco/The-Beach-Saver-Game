@@ -654,12 +654,12 @@ namespace trabajofinal {
 				timer1->Interval += 30;  // funcion opcional para disminur la velocidad 
 			}
 			// el codigo de abajo es de los tachos y me sale error al momento de agregarlo 
-			//if (e->KeyCode == Keys::G && controller->getCleaner()->getDinero() >= 350 && controller->cantTAchos() < 3) // para comprar un tacho 
-			//{
-			//	controller->addTacho(imgTacho, rand() % 900, rand() % 600); // hubicasion del tacho 
-			//	controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 350);  // resta el num de dinero al momento de comprar
-			//
-			//}
+			if (e->KeyCode == Keys::G && controller->getCleaner()->getDinero() >= 350 && controller->cantTAchos() < 3) // para comprar un tacho 
+			{
+				controller->addTacho(imgTacho, rand() % 900, rand() % 600); // hubicacion del tacho 
+				controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 350);  // resta el num de dinero al momento de comprar
+			
+			}
 			if (e->KeyCode == Keys::H && controller->getCleaner()->getDinero() >=  750) // para ampliar la capasidad de la bolsa 
 			{
 				controller->getCleaner()->setCapacidadBolsa(controller->getCleaner()->getCapacidadBolsa() + 4);

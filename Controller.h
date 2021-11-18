@@ -62,7 +62,7 @@ public:
 		for (int i = 0; i < enemigos.size(); i++)
 			enemigos[i]->move(g);
 		for (int i = 0; i < tachos.size(); i++)//colision con tacho 
-			if (!cleaner->AreaNextRectangle().IntersectsWith(tachos[i]->AreaTacho()))
+			if (cleaner->AreaNextRectangle().IntersectsWith(tachos[i]->AreaTacho())==false)
 				cleaner->move(g);
 		for (int i = 0; i < baños.size(); i++)//colision con baño 
 			if (!cleaner->AreaNextRectangle().IntersectsWith(baños[i]->AreaBano()))
@@ -127,14 +127,13 @@ public:
 			for (int g = 0; g < tachos.size(); g++)
 			{
 				if (basuras[i]->AreaRectangle().IntersectsWith(tachos[g]->AreaRecoleccionTacho())) {
-					//           si la basura intersecta con el area de recolleción del tacho
+					//si la basura intersecta con el area de recolleción del tacho
 					basuras[i]->setVisible(false);//desaparece
 					basuras.erase(basuras.begin() + i); //se elimina
 					cleaner->setDinero(cleaner->getDinero() + 10); //se añade dinero
 					limpiezaPlaya++; //se aumenta la limpieza de la playa
 				}
-			}
-			
+			}	
 		}
 		for (int i = 0; i < tachos.size(); i++)//radio de tacho interactua con personaje
 		{
