@@ -1,25 +1,25 @@
 ﻿  MyForm_empezar.cpp
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(34,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(172,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(174,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(175,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(173,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(175,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(176,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(177,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   MyForm_level01.cpp
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(34,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(172,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(174,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(175,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(173,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(175,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(176,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(177,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   MyForm_principal.cpp
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(34,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(172,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(174,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(175,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(173,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(175,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(176,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\controller.h(177,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
 C:\Users\migue\Documents\GitHub\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   Generando código...

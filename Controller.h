@@ -122,9 +122,10 @@ public:
 				}
 			}
 		}
-		for (int i = 0; i < basuras.size(); i++)//radio de recoleccion automatica de tacho con basura 
+		
+		for (int g = 0; g < tachos.size(); g++)//radio de recoleccion automatica de tacho con basura 
 		{
-			for (int g = 0; g < tachos.size(); g++)
+			for (int i = 0; i < basuras.size(); i++)
 			{
 				if (basuras[i]->AreaRectangle().IntersectsWith(tachos[g]->AreaRecoleccionTacho())) {
 					//si la basura intersecta con el area de recolleción del tacho
