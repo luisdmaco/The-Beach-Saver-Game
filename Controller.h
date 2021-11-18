@@ -15,12 +15,14 @@ private:
 	Humano* cleaner;
 	int nivelMicrobiologico;
 	int limpiezaPlaya;
+	int v; // veolcidad de movimiento 
 
 public:
 	Controller(Bitmap^ imgCleaner) {
 		cleaner = new Humano(imgCleaner,100,100);
-		nivelMicrobiologico = 0;
+		nivelMicrobiologico = 100;
 		limpiezaPlaya = 0;
+		v = 5;
 	}
 	~Controller() {}
 #pragma region Add-Functions
@@ -67,7 +69,6 @@ public:
 				cleaner->move(g);
 	}
 	void MovimientoMonigote(bool accion, Keys tecla) {
-		int v = 5; //value == dx / dy
 		if (accion == true) //keydown
 		{
 			if (tecla == Keys::W )
@@ -173,9 +174,12 @@ public:
 	Basura* getBasura(int i) { return basuras[i]; }
 	int cantBasu() { return Convert::ToInt64(basuras.size()); }
 	int cantBaños() { return Convert::ToInt64(baños.size()); }
+	int cantTAchos() { return Convert::ToInt64(tachos.size()); }
 	int getMicrobiologico() { return nivelMicrobiologico; }
 	void setMicrobiologico(int v) { nivelMicrobiologico = v; }
 	int getLimpiezaPlaya() { return limpiezaPlaya; }
 	void setLimpiezaPlaya(int v) { limpiezaPlaya = v; }
+
+	
 #pragma endregion
 };

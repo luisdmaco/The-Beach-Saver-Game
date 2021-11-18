@@ -41,6 +41,7 @@ public:
 	}
 	int getX() { return x; }
 	int getY() { return y; }
+
 	void setVisible(bool v) { visible = v; }
 	int getVisible() { return visible; }
 #pragma endregion
