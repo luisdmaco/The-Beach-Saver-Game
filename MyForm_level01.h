@@ -601,12 +601,13 @@ namespace trabajofinal {
 		if (controller->getCleaner()->getDinero() > 350)
 		{
 			groupBox2->Enabled = true;
-			groupBox2->Text = "Tienda abierta compra lo nesesario";
+			groupBox2->Text = "TIENDA ABIERTA (compra lo necesario )";
 			
 		}
 		else
 		{
 			groupBox2->Enabled = false;
+			groupBox2->Text = "TIENDA CERRADA (por covid )";
 		}
 
 		
@@ -658,6 +659,7 @@ namespace trabajofinal {
 			{
 				controller->addTacho(imgTacho, rand() % 900, rand() % 600); // hubicacion del tacho 
 				controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 350);  // resta el num de dinero al momento de comprar
+				timer1->Interval += 30;  // funcion opcional para disminur la velocidad 
 			
 			}
 			if (e->KeyCode == Keys::H && controller->getCleaner()->getDinero() >=  750) // para ampliar la capasidad de la bolsa 
