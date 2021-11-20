@@ -30,6 +30,8 @@ Class trabajofinal.MyForm_level01: AutoLayout, AnsiClass, Class, Public, BeforeF
 Class trabajofinal.MyForm_level_02: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ColocaNombre(String): PrivateScope, Public, HideBySig
 Class trabajofinal.MyForm_empezar: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

@@ -592,8 +592,8 @@ namespace trabajofinal {
 		//draw
 
 		buffer->Graphics->DrawImage(Mapa, 0, 0, panel1->Width, panel1->Height);
-		buffer->Graphics->DrawString(nombre, gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 120, 10);
-		buffer->Graphics->DrawString("USUARIO : ", gcnew Drawing::Font("Arial", 10, FontStyle::Bold), Brushes::Black, 50, 10);
+		buffer->Graphics->DrawString(nombre, gcnew Drawing::Font("Arial", 16, FontStyle::Bold), Brushes::White, 170, 10);
+		buffer->Graphics->DrawString("USUARIO : ", gcnew Drawing::Font("Arial", 16, FontStyle::Bold), Brushes::White, 50, 10);
 		//objmonigote->draw(buffer->Graphics, imgCleaner);
 		controller->dibujarTodo(buffer->Graphics, imgCleaner, imgEnemy, imgBaño, imgTacho, imgBasura);
 

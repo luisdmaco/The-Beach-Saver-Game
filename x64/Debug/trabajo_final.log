@@ -6,14 +6,16 @@ C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(1
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(177,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  MyForm_level01.cpp
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level_02.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level_02.h(37,82): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  MyForm_level_02.cpp
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(34,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(173,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(175,42): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(176,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(177,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level_02.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level_02.h(37,82): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   MyForm_principal.cpp
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(34,73): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(173,43): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
@@ -22,6 +24,8 @@ C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(1
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\controller.h(177,44): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level01.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
 C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level01.h(37,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level_02.h(21,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\MyForm_level_02.h(37,82): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   Generando código...
   MyForm_creditos.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   trabajo_final.vcxproj -> C:\Users\HP\OneDrive\Escritorio\FFFFF\TrabajoFinal_ProgramacionII\x64\Debug\trabajo_final.exe

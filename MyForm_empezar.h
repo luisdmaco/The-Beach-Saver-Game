@@ -176,7 +176,7 @@ namespace trabajofinal {
 			this->Visible = false;
 		}
 		else {
-			MessageBox::Show("Ingrese Su Nombre");
+			MessageBox::Show("Ingrese Su Nombre Primero ");
 		}
 		
 	}
@@ -185,6 +185,7 @@ namespace trabajofinal {
 		{
 
 			MyForm_level_02^ L2 = gcnew MyForm_level_02();
+			L2->ColocaNombre(textBox1_nombre->Text);
 			L2->Show();
 			this->Visible = false;
 		}
