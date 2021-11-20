@@ -473,9 +473,9 @@ namespace trabajofinal {
 				static_cast<System::Byte>(0)));
 			this->lbBuyBolsa->Location = System::Drawing::Point(6, 158);
 			this->lbBuyBolsa->Name = L"lbBuyBolsa";
-			this->lbBuyBolsa->Size = System::Drawing::Size(69, 42);
+			this->lbBuyBolsa->Size = System::Drawing::Size(76, 42);
 			this->lbBuyBolsa->TabIndex = 2;
-			this->lbBuyBolsa->Text = L" Ampliar\r\n   Bolsa\r\n  (S/.750) : ";
+			this->lbBuyBolsa->Text = L" Ampliar\r\n   Bolsa\r\n  (S/.1000) : ";
 			// 
 			// lbBuyTacho
 			// 
@@ -488,7 +488,7 @@ namespace trabajofinal {
 			this->lbBuyTacho->Name = L"lbBuyTacho";
 			this->lbBuyTacho->Size = System::Drawing::Size(68, 42);
 			this->lbBuyTacho->TabIndex = 1;
-			this->lbBuyTacho->Text = L" Comprar \r\n  Tacho\r\n (S/.350) : ";
+			this->lbBuyTacho->Text = L" Comprar \r\n  Tacho\r\n (S/.450) : ";
 			// 
 			// lbBuyBaño
 			// 
@@ -501,7 +501,7 @@ namespace trabajofinal {
 			this->lbBuyBaño->Name = L"lbBuyBaño";
 			this->lbBuyBaño->Size = System::Drawing::Size(69, 42);
 			this->lbBuyBaño->TabIndex = 0;
-			this->lbBuyBaño->Text = L" Comprar\r\n    Baño \r\n  (S/.650) : ";
+			this->lbBuyBaño->Text = L" Comprar\r\n    Baño \r\n  (S/.800) : ";
 			// 
 			// groupBox1
 			// 
@@ -665,7 +665,7 @@ namespace trabajofinal {
 		controller->dibujarTodo(buffer->Graphics, imgCleaner, imgEnemy, imgBaño, imgTacho, imgBasura);
 
 		// validacion para abrir la tienda 
-		if (controller->getCleaner()->getDinero() > 350)
+		if (controller->getCleaner()->getDinero() > 450)
 		{
 			groupBox2->Enabled = true;
 			groupBox2->Text = "TIENDA ABIERTA (compra lo necesario )";
@@ -746,24 +746,24 @@ private: System::Void MyForm_level_02_KeyDown(System::Object^ sender, System::Wi
 
 	if (groupBox2->Enabled == true)
 	{
-		if (e->KeyCode == Keys::F && controller->getCleaner()->getDinero() >= 650 && controller->cantBaños() < 4) // para comprar un baño 
+		if (e->KeyCode == Keys::F && controller->getCleaner()->getDinero() >= 800 && controller->cantBaños() < 4) // para comprar un baño 
 		{
 			controller->addBaño(imgBaño, rand() % 900, rand() % 600); // hubicasion del baño 
-			controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 650);  // resta el num de dinero al momento de comprar
+			controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 800);  // resta el num de dinero al momento de comprar
 			timer1->Interval += 30;  // funcion opcional para disminur la velocidad 
 		}
 		// el codigo de abajo es de los tachos y me sale error al momento de agregarlo 
-		if (e->KeyCode == Keys::G && controller->getCleaner()->getDinero() >= 350 && controller->cantTAchos() < 4) // para comprar un tacho 
+		if (e->KeyCode == Keys::G && controller->getCleaner()->getDinero() >= 450 && controller->cantTAchos() < 4) // para comprar un tacho 
 		{
 			controller->addTacho(imgTacho, rand() % 900, rand() % 600); // hubicacion del tacho 
-			controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 350);  // resta el num de dinero al momento de comprar
+			controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 450);  // resta el num de dinero al momento de comprar
 			timer1->Interval += 30;  // funcion opcional para disminur la velocidad 
 
 		}
-		if (e->KeyCode == Keys::H && controller->getCleaner()->getDinero() >= 750) // para ampliar la capasidad de la bolsa 
+		if (e->KeyCode == Keys::H && controller->getCleaner()->getDinero() >= 1000) // para ampliar la capasidad de la bolsa 
 		{
-			controller->getCleaner()->setCapacidadBolsa(controller->getCleaner()->getCapacidadBolsa() + 4);
-			controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 750);  // resta el num de dinero al momento de comprar
+			controller->getCleaner()->setCapacidadBolsa(controller->getCleaner()->getCapacidadBolsa() + 6);
+			controller->getCleaner()->setDinero(controller->getCleaner()->getDinero() - 1000);  // resta el num de dinero al momento de comprar
 
 		}
 
