@@ -147,7 +147,7 @@ public:
 				cleaner->setBolsa(0);
 			}
 		}
-
+		//comentario de prueba
 
 		//Elimination
 		//enemigos (fuera del mapa)
