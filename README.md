@@ -1,20 +1,20 @@
 # The Beach Saver
 
-**The Beach Saver** ist ein Spiel, das entwickelt wurde, um das Bewusstsein für die Verschmutzung der Strände zu schärfen. Das Projekt war das Abschlussprojekt für die Vorlesung "Programación II" an der Universidad Peruana de Ciencias Aplicadas (UPC).
+**The Beach Saver** is a game developed to raise awareness about beach pollution. This project was the final project for the "Programación II" course at the Universidad Peruana de Ciencias Aplicadas (UPC).
 
-## Beschreibung
+## Description
 
-In **The Beach Saver** übernimmt der Spieler die Rolle eines Sammlers, der Müll an den Stränden einsammelt. Ziel des Spiels ist es, die Strände sauber zu halten und das Bewusstsein für Umweltprobleme zu fördern.
+In **The Beach Saver**, the player takes on the role of a collector who picks up trash on the beaches. The goal of the game is to keep the beaches clean and raise awareness about environmental issues.
 
-## Merkmale
+## Features
 
-- **Spielziel**: Sammeln von Müll an den Stränden.
-- **Bewusstseinsbildung**: Spieler lernen die Auswirkungen der Umweltverschmutzung auf die Strände kennen.
-- **Einfacher Einstieg**: Das Spiel ist leicht verständlich und kann von Spielern jeden Alters gespielt werden.
+- **Game Objective**: Collect trash on the beaches.
+- **Awareness**: Players learn about the impact of pollution on beaches.
+- **Easy to Play**: The game is simple to understand and can be played by people of all ages.
 
-## Technologien
+## Technologies
 
-Das Spiel wurde mit den folgenden Technologien entwickelt:
-- Programmiersprachen: C++.
-- Entwicklungsumgebung: Konsole.
+The game was developed using the following technologies:
+- Programming Languages: C++.
+- Development Environment: Console.
 - IDEs: Visual Studio
